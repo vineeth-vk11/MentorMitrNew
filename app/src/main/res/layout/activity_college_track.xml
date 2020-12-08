@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/llForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/etSerialNumber"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textColor="#000000"
+            android:hint="Serial Number"
+            android:textColorHint="@color/cardview_shadow_start_color"
+            android:background="@drawable/border"
+            android:layout_margin="15dp">
+        </EditText>
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/etCollege"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textColor="#000000"
+            android:hint="Colleges/Universities"
+            android:textColorHint="@color/cardview_shadow_start_color"
+            android:background="@drawable/border"
+            android:layout_margin="15dp">
+        </EditText>
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/etCourse"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textColor="#000000"
+            android:hint="Course/Syllabus"
+            android:textColorHint="@color/cardview_shadow_start_color"
+            android:background="@drawable/border"
+            android:layout_margin="15dp">
+        </EditText>
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/etSelection"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textColor="#000000"
+            android:hint="Selection Criteria"
+            android:textColorHint="@color/cardview_shadow_start_color"
+            android:background="@drawable/border"
+            android:layout_margin="15dp">
+        </EditText>
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/etAchieve"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textColor="#000000"
+            android:hint="What we need to achieve them"
+            android:textColorHint="@color/cardview_shadow_start_color"
+            android:background="@drawable/border"
+            android:layout_margin="15dp">
+        </EditText>
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/etImprove"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textColor="#000000"
+            android:hint="Things to improver personally"
+            android:textColorHint="@color/cardview_shadow_start_color"
+            android:background="@drawable/border"
+            android:layout_margin="15dp">
+        </EditText>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Submit"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/llForm">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:id="@+id/headerScroll"
+        android:layout_height="@dimen/header_height"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:background="@color/colorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/llForm"
+            android:visibility="invisible"
+            android:id="@+id/hor_linear">
+            <TextView
+                android:layout_width="@dimen/cell_width"
+                android:id="@+id/txtName"
+                android:textStyle="bold"
+                android:layout_marginStart="@dimen/margin"
+                android:text="Serial NO"
+                android:textAllCaps="true"
+                android:gravity="center|start"
+                android:textColor="@android:color/white"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:layout_width="@dimen/cell_width"
+                android:id="@+id/txtLogo"
+                android:textStyle="bold"
+                android:layout_marginStart="@dimen/margin"
+                android:text="College"
+                android:textAllCaps="true"
+                android:gravity="center|start"
+                android:textColor="@android:color/white"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:layout_width="@dimen/cell_width"
+                android:id="@+id/txtLocation"
+                android:textStyle="bold"
+                android:layout_marginStart="@dimen/margin"
+                android:gravity="center|start"
+                android:text="Syllabus"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:layout_width="@dimen/cell_width"
+                android:id="@+id/txtStadiumName"
+                android:gravity="center|start"
+                android:layout_marginStart="@dimen/margin"
+                android:textStyle="bold"
+                android:text="Selection Criteria"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:layout_width="@dimen/cell_width"
+                android:id="@+id/txtLeagueName"
+                android:textStyle="bold"
+                android:layout_marginStart="@dimen/margin"
+                android:gravity="center|start"
+                android:text="Achievements"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:layout_width="@dimen/cell_width"
+                android:id="@+id/txtCoachName"
+                android:gravity="center|start"
+                android:textStyle="bold"
+                android:layout_marginStart="@dimen/margin"
+                android:text="Improvements"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:layout_height="match_parent"/>
+
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTable"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:layout_below="@+id/llForm">
+    </androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>

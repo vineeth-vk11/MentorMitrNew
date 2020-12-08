@@ -1,0 +1,252 @@
+<resources>
+    <string name="app_name">Mentor Mitr</string>
+    <string name="xcontinue">Continue</string>
+    <string name="start">Start</string>
+    <string name="close">Close</string>
+    <string name="finish">Finish</string>
+    <string name="eng"><b>Courses:</b> B.Tech\n
+                       <b>Universities:</b> IIT/NIT/IIIT, state colleges\n
+                       <b>Selection Criteria:</b> PCM + Entrance\n
+        <b>Score:</b> 75% ile </string>
+    <string name="medical"><b>Courses:</b> MBBS\n
+                           <b>Universities:</b> NEET/AIIMS\n
+                           <b>Selection Criteria:</b> PCB + Entrance\n
+                           <b>Score:</b> 75% ile</string>
+    <string name="bba"><b>Courses:</b> BBA/BBA+MBA\n
+                      <b>Universities:</b> IP/Xaviers etc.\n
+                      <b>Selection Criteria:</b> Quantitative Ability, Reasoning and Analytical Ability, General English, Business and General Awareness\n
+                      <b>Score:</b> 75% ile</string>
+    <string name="du"><b>Courses:</b> BMS/BFIA/BBE \n
+                      <b>Universities:</b> DU/Shiv Nadar/Xavier\n
+                      <b>Selection Criteria:</b> Quantitative Ability, Reasoning and Analytical Ability, General English, Business and General Awareness + 12th boards score\n
+                      <b>Score:</b> 95% ile</string>
+    <string name="law"><b>Courses:</b> BA-LLB \n
+                       <b>Universities:</b> NLU/Lloyd etc.\n
+                       <b>Selection Criteria:</b> CLAT/Other University entrance Quantitative Ability, Reasoning and Analytical Ability, General English, General Awareness, Legal Aptitude\n
+                       <b>Score:</b> 70% ile</string>
+    <string name="science"><b>Courses:</b> BSC (Gen)/Hons (Physics, Chemistry, Biology, Mathematics, Statistics, Nursing)\n
+                           <b>Universities:</b> DU/Xavier (many more)\n
+                           <b>Selection Criteria:</b> Merit in 12th\n
+                           <b>Score:</b> 90%+ for top college </string>
+    <string name="bca"><b>Courses:</b> BCA\n
+                       <b>Universities:</b> IP/Amity\n
+                       <b>Selection Criteria:</b> 12th Marks\n
+                       <b>Score:</b> State engineerig exams, 70% in board</string>
+    <string name="pharma"><b>Courses:</b> B Pharma(H)/B Pharma in Chemistry\n
+                          <b>Universities:</b> ICT, UIPS etc.\n
+                          <b>Selection Criteria:</b> 12th Marks\n
+                          <b>Score:</b> State engineerig exams, 70% in board</string>
+    <string name="bcom"><b>Courses:</b> BCom Hons, BCom Prog\n
+                        <b>Universities:</b> DU/Xavier/IP\n
+                        <b>Selection Criteria:</b> Merit in 12th\n
+                        <b>Score:</b> 90% + for top college</string>
+    <string name="ba"><b>Courses:</b> DU/Xavier\n
+                      <b>Universities:</b> DU/Xavier\n
+                      <b>Selection Criteria:</b> DU:Merit in 12th, Private Universities: Entrance\n
+                      <b>Score:</b> 90% + for DU</string>
+    <string name="vocational"><b>Courses:</b> Human resource, Hotel Management, Event management etc.\n
+                              <b>Universities:</b> IHM etc.\n
+                              <b>Selection Criteria:</b> Merit in 12th, Entrance: for few colleges\n
+                              <b>Score:</b> 60%+</string>
+    <string name="languages"><b>Courses:</b> English(Hon), Foreign Languages, Regional language\n
+                             <b>Universities:</b> DU,JNU etc.\n
+                             <b>Selection Criteria:</b> Merit in 12th\n
+                             <b>Score:</b> 70%+</string>
+    <string name="ca"><b>Courses:</b> CA/CS\n
+                      <b>Universities:</b> ICAI\n
+                      <b>Selection Criteria:</b> CA/CS Foundation\n
+                      <b>Score:</b> 50%</string>
+    <string name="sports"><b>Courses:</b> B.P.Ed, B.Sc in sports, Sports management\n
+                          <b>Category:</b> Football, Cricket, Handball, Volleyball and all other sports\n
+                          <b>Selection Criteria:</b> Merit in 12th+Sports achievements etc.\n
+                          <b>Score:</b> 50%+</string>
+    <string name="iim"><b>Courses:</b> BBA+MBA(Specialization)\n
+                       <b>Universities:</b> IIM Indore\n
+                       <b>Selection Criteria:</b> QA+Analytical Reasoning+Comprehension\n
+                       <b>Score:</b> 60%+ </string>
+    <string name="enterpreneurship"><b>Courses:</b> Skills+Launch a venture\n
+                                    <b>Selection Criteria:</b> Practice entrepreneurship (May take any course), incubators, accelerators</string>
+    <string name="traditional"><b>Courses:</b> Content Creator(YouTube,Insta,TikTok etc.), E-Sports(PubG, CSGO etc.), Influencer, Speaker\n
+                               <b>Selection Criteria:</b> Practice and share your achievements</string>
+    <string name="performing"><b>Courses:</b> Art, Film, Media Studies, Social Sciences\n
+                              <b>Universities:</b> IADA etc. (BPA)\n
+                              <b>Selection Criteria:</b> Merit in 12th\n
+                              <b>Score:</b> 60%+</string>
+    <string name="fine"><b>Courses:</b> Applied Arts, Pottery and Ceramics, Textile Design, Music, Calligraphy, Sculpture, Printmaking, Illustration (across all domains)\n
+                        <b>Universities:</b> BFA\n
+                        <b>Selection Criteria:</b> Merit in 12th\n
+                        <b>Score:</b> 60%+</string>
+    <string name="visual"><b>Courses:</b> Photography, Filmmaking, Visual Arts Course, Architecture, Writing (English, Mass Communication, Journalism), Sculpture. Video Editing\n
+                          <b>Universities:</b> LSR,BHU\n
+                          <b>Selection Criteria:</b> Merit in 12th\n
+                          <b>Score:</b> 60%+</string>
+    <string name="design"><b>Courses:</b> Fashion Designing, Interior Designing, Animation, Graphic Design, Textile Designing, Product Design\n
+                          <b>Universities:</b> NIFT, Shristi etc.\n
+                          <b>Selection Criteria:</b> Merit in 12th+ Entrance(UCEED, NIFT, IIAD etc)\n
+                          <b>Score:</b> 60%+</string>
+    <string name="base1"><b>For Engineering/Medical:</b></string>
+
+    <string name="intro"><b>“We, at MentorMitr, meet individuals wherever they are in their journey of career development, and help them reach where they wish to be.”</b></string>
+    <string-array name="timetable_header">
+        <item></item>
+        <item>Sun</item>
+        <item>Mon</item>
+        <item>Tue</item>
+        <item>Wed</item>
+        <item>Thu</item>
+        <item>Fri</item>
+        <item>Sat</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="quickstart_message">Click the SUBSCRIBE TO WEATHER button below to subscribe to the
+        weather topic. Messages sent to the weather topic will be received. The LOG TOKEN button logs the
+        InstanceID token to logcat.</string>
+    <string name="subscribe_to_weather">Subscribe To MentorMitr</string>
+    <string name="log_token">Log Token</string>
+
+    <string name="msg_subscribed">Subscribed to MentorMitr topic</string>
+    <string name="msg_token_fmt" translatable="false">InstanceID Token: %s</string>
+
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <!--
+        This is the name that users will see when interacting with this channel.
+        It should describe the category of notifications that will be sent through this channel
+     -->
+    <!-- [START fcm_default_icon_string] -->
+    <string name="default_notification_channel_name" translatable="true">MentorMitr</string>
+    <!-- [END fcm_default_icon_string] -->
+    <string name="msg_subscribe_failed">Failed to subscribe to MentorMitr topic</string>
+    <string name="fcm_message">Report generated</string>
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start1">GOT IT</string>
+    <string name="slide_1_title"></string>
+    <string name="slide_1_desc">TO THE PARTY..</string>
+    <string name="slide_2_title">ORDER.EAT.PHIR REPEAT</string>
+    <string name="brief">MentorMitr is a platform which systematically creates a program based approach to enable students and working people to define their goals clearly and follow a method to achieve those predictably.</string>
+
+    <string name="time"><b>1. Time Management:</b> To create awareness of optimum time management with discipline.</string>
+    <string name="goals"><b>2. Goals Setting:</b> Setting and implementing a definitive goal to achieve desired ends.</string>
+    <string name="soft"><b>3. Soft Skills:</b> Imparted skills to effectively manage relationships and tasks through training.</string>
+    <string name="eq"><b>4. Emotional Quotient (EQ):</b> It is a measure of your real potential or how resilient you are mentally to cope with your environment.
+ </string>
+    <string name="priority"><b>5. Priority Management:</b> Choosing from a plethora of activities on what to do first and then the order to optimize the outcome.
+ </string>
+    <string name="performance"><b>6. Performance Enhancement:</b> Improving performance optimally is measuring it with discipline and consistency.</string>
+
+    <string name="working_1_month_1"><b>1.SWOT Analysis and Counselling Session 1:\n </b>Week 1 - Based on your psychometric and aptitude profile. This includes an online test for which you get a report and counselling with an expert within week 1 of the engagement
+</string>
+    <string name="working_1_month_2"><b>2.SWOT Analysis and Counseling Session 2:\n </b>Week 2 - Of your current situation based on a questionnaire which digresses into your day-to-day, routine, accomplishments and aspirations and creates a roadmap.
+</string>
+    <string name="working_1_month_3"><b>3.Development of Templates:\n</b>Week 3 - Customized to your needs that sets the compass</string>
+
+    <string name="working_1_month_4"><b>4.Set up a Self-Awareness:</b> Week 4 - Process for self-control</string>
+
+    <string name="working_1_month_5"><b>5.More Features:</b> Free access to webinars during the month</string>
+
+    <string name="working_1_month_6"><b>6.Our Support:</b> 24X7 Chatbot Facility</string>
+    <string name="working_1_month_7"><b>Cost – Rs- 6000/(USD-75)</b></string>
+
+
+    <string name="working_3_month_1"><b>1.SWOT Analysis and Counselling Session 1:</b> Month 1 - Based on your psychometric and aptitude profile. This includes an online test for which you get a report and counselling with an expert within one week of the engagement</string>
+    <string name="working_3_month_2"><b>2.Analysis and Counseling Session 2:</b> Of your current situation based on a questionnaire which digresses into your day-to-day, routine, accomplishments and aspirations and creates a roadmap</string>
+    <string name="working_3_month_3"><b>3.Development of Templates:</b> Month 2 -  Customized to your needs that sets the compass</string>
+
+    <string name="working_3_month_4"><b>4.Weekly Report:</b> On your improvement and strength indices generated for self-evaluation and improvement
+</string>
+
+    <string name="working_3_month_5"><b>5.Counselling Session 3:</b> With your personal coach for tweaking the plan if it needs or identifying new things and have your buy-in
+</string>
+
+    <string name="working_3_month_6"><b>6.Assessment Centre:</b> Month 3 - A diagnostic assessment towards the end of the program to reassess if everything that we planned is moving on the tracks
+</string>
+    <string name="working_3_month_7"><b>7.Weekly Reports:</b> performance reports on indices
+</string>
+    <string name="working_3_month_8"><b>8.Other Support Includes:\n</b>-60 Minutes/month  Telephonic Counselling:   Available (to be scheduled each time).\n-Maximum number of sessions - 4 of 15 mins each every month\n-24X7 Support via Chatbot\n-Free Access to Webinars for 3 months\n
+</string>
+    <string name="working_3_month_9"><b>Cost –INR -12000/(USD-150)
+</b></string>
+
+    <string name="college_1_month_1"><b>1.Counselling Session 1:</b> To Identify Strengths and Development Areas - Psychometric Test, Analysis Report and Individual Counseling Session </string>
+
+    <string name="college_1_month_2"><b>2.Counselling Session 2:</b> Competitive Ability Mapping done Through an Onboarding Questionnaire to understand the academic ability and social environment so that the student can be counselled efficiently
+</string>
+
+    <string name="college_1_month_3"><b>3.Tracks and Options Template:</b> creating and counselling students for customized course plans to ensure clarity of desired career plans
+</string>
+
+    <string name="college_1_month_4"><b>4.Our Support:</b> 24x7 Chatbot access for 1 month</string>
+
+    <string name="college_1_month_5"><b>5.More Features:</b> 1 Month Free To Webinars
+</string>
+
+    <string name="college_1_month_6"><b>Cost – Rs-6000/(USD-75) for 1 month</b></string>
+
+    <string name="college_3_month_1"><b>1.Counselling Session 1:</b> To Identify Strengths and Development Areas - Psychometric Test, Analysis Report and Individual Counseling Session
+</string>
+    <string name="college_3_month_2"><b>2.Counselling Session 2:</b> Competitive Ability Mapping done Through an Onboarding Questionnaire to understand the academic ability and social environment so that the student can be counselled efficiently
+</string>
+    <string name="college_3_month_3"><b>3.Tracks and Options Template:</b> Creating and counselling students for customized course plans to ensure clarity of desired career plans
+</string>
+    <string name="college_3_month_4"><b>4.Time Tracker:</b> Customized Time tracker maps current activity time , helps enhance your performance through optimisation. Real-time Reports are generated and are available on a weekly basis based on your own inputs and guide you for self-improvement. </string>
+    <string name="college_3_month_5"><b>5.Real-time Telephonic Session:</b> 60 minutes per month (for 3 months)</string>
+    <string name="college_3_month_6"><b>6.Monthly Counseling Sessions:</b> 4 Session In Total - 3 with Coach and 1 Expert Coach
+</string>
+    <string name="college_3_month_7"><b>7.More Features:</b> Webinar Access for 3 Months</string>
+    <string name="college_3_month_8"><b>8.Continuous Support:</b> 24X7 Chatbot Facility1</string>
+    <string name="college_3_month_9"><b>9.Performance Tracking:</b> Via Digital Reports</string>
+    <string name="college_3_month_10"><b>Cost - (INR-12000)/150 USD for 3 months</b></string>
+    <string name="school_1_year_1"><b>1.Counselling Session 1:</b> Psychometric Analysis of the student is done through a Standard Test Online to determine their Course and development area.
+</string>
+    <string name="school_1_year_2"><b>2.Counselling Session 2:</b> Competitive Ability Mapping done Through an Onboarding Questionnaire to understand the academic ability and social environment so that the student can be counselled efficiently
+</string>
+    <string name="school_1_year_3"><b>3.Tracks and Options Template:</b> Based on students ability his various tracks are laid out digitally
+</string>
+    <string name="school_1_year_4"><b>4.Time Tracker:</b> Maps students Current and Optimized Time Management and Weekly Reports of Performance </string>
+    <string name="school_1_year_5"><b>5.Energy and Engagement Measurement:</b> Management of Performance Enhancement while catering to Social and Personal Needs in a Weekly Report
+    </string>
+    <string name="school_1_year_6"><b>6.EQ and grooming Modules:</b> Through a Daily Feed to reinforce Goals and Affirm through special sessions, webinars, blogs and videos
+</string>
+    <string name="school_1_year_7"><b>7.Monthly Personal Structured Counseling:</b> Total 12 Sessions of 1 hour each - Personal Coach so that Monthly Variations and Improvements could be studied for Course Correction.
+</string>
+    <string name="school_1_year_8"><b>8.Continuous Support:</b> 24x7 Chatbot Facility </string>
+    <string name="school_1_year_9"><b>9.Total Counselling Time per Month:</b> 120 minutes a Month Telephonic Counselling Session
+</string>
+    <string name="school_1_year_10"><b>10.Other Features for Interaction:</b> Free Access to Webinars Throughout the Year, Videos, Blogs </string>
+    <string name="school_1_year_11"><b>Cost –INR-45000/ (USD -700 ) for 1 year</b></string>
+
+    <string name="school_3_month_1"><b>1.Counselling Session 1:</b> To Identify Strengths and Development Areas - Psychometric Test, Analysis Report and Individual Counseling Session
+</string>
+    <string name="school_3_month_2"><b>2.Counselling Session 2:</b> Competitive Ability Mapping done Through an Onboarding Questionnaire to understand the academic ability and social environment so that the student can be counselled efficiently
+</string>
+    <string name="school_3_month_3"><b>3.Tracks and Options Template:</b> Based on student’s ability the various tracks are laid out digitally
+</string>
+    <string name="school_3_month_4"><b>4.Time Tracker:</b> Maps students Current and Optimized Time Management and Weekly Reports the Performance
+</string>
+    <string name="school_3_month_5"><b>5.Real-time Telephonic Session:</b> 60 minutes per month (for the course of 3 months)
+</string>
+    <string name="school_3_month_6"><b>6.Monthly Counseling Sessions:</b> 3 and 4 sessions in month 2 and 3 sessions with your Personal Coach
+</string>
+    <string name="school_3_month_7"><b>7.Free Access Webinars:</b> For 3 months</string>
+    <string name="school_3_month_8"><b>8.Continuous Support:</b> 24X7 Chatbot Facility</string>
+    <string name="school_3_month_9"><b>9.Performance Tracking:</b> Via Digital Reports</string>
+    <string name="school_3_month_10"><b>Cost - 12000/(150 USD) for 3 months </b></string>
+
+    <string name="school_1_month_1"><b>1.Counselling Session 1:</b> To Set The Course Followed By Course Correction - Psychometric Analysis of the student through a Standard Test Online and Analysis Report to identify their Strengths and Development Areas.</string>
+    <string name="school_1_month_2"><b>2.Counselling Session 2:</b> Competitive Ability Mapping done Through an Onboarding Questionnaire to understand the academic ability and social environment so that the student can be counselled efficiently
+</string>
+    <string name="school_1_month_3"><b>3.Tracks and Options Template:</b> Based on students ability the various tracks are laid out digitally
+
+</string>
+    <string name="school_1_month_4"><b>4.Our Support:</b> 24x7 Chatbot Access For 1 month</string>
+    <string name="school_1_month_5"><b>5.More Features:</b> 1 Month Free To Webinars</string>
+    <string name="school_1_month_6"><b>Cost – Rs-6000 / (USD-75) for 1 month</b></string>
+</resources>

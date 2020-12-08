@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.MentorMitrAndroid">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MentorMitr">
+        <activity android:name=".MentorDashboard.WorkingDetailsForMentorActivity"></activity>
+        <activity android:name=".MentorDashboard.CollegeDetailsForMentorActivity" />
+        <activity android:name=".AfterPaymentCollegeStudentDashboard.AfterPaymentCollegeStudentDashboardActivity" />
+        <activity android:name=".AfterPaymentWorkingProfessionalDashboard.AfterPaymentWorkingProfessionalActivity" />
+        <activity android:name=".MentorWeeklyStatsHelper.MentorWeeklyStatsActivity" />
+        <activity android:name=".MentorDashboard.StudentDetailsForMentorAcitivity" />
+        <activity android:name=".MentorDashboard.MentorDashboardActivity" />
+        <activity android:name=".WeeklyTimetableHelper.WeeklyTimetableActivity" />
+        <activity android:name=".ActivitiesHelper.ActivitiesActivity" />
+        <activity android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".IntroHelper.IntroActivity" />
+        <activity android:name=".LoginHelperNew.LoginEnterDetailsActivity" />
+        <activity android:name=".LoginHelperNew.LoginMobileNumberActivity" />
+        <activity android:name=".LoginHelperNew.LoginOtpActivity" />
+        <activity android:name=".BeforePaymentDashboardHelper.BeforePaymentDashboardActivity" />
+        <activity android:name=".AfterPaymentStudentDashboard.AfterPaymentSchoolStudentDashboardActivity" />
+        <activity android:name=".QuestionnaireHelper.SurveyActivity" />
+        <activity android:name=".TracksAndOptionsHelper.TracksAndOptionsActivity" />
+        <activity android:name=".CollegeTrackHelper.CollegeTrack" />
+        <activity android:name=".PriorityHelper.PrioritiesActivity" />
+        <activity android:name=".GoalsAndAffirmationsHelper.GoalsAndAffirmationsActivity" />
+        <activity android:name=".SessionFeedbackHelper.SessionFeedbackActivity" />
+        <activity android:name=".SessionSchedulingHelper.SessionSchedulingActivity" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

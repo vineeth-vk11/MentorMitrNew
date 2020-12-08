@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:enabled="true"
+        android:title="Home"
+        android:icon="@drawable/ic_baseline_home_24" />
+
+    <item
+        android:id="@+id/programs"
+        android:enabled="true"
+        android:title="Programs"
+        android:icon="@drawable/icon_news"/>
+
+    <item
+        android:id="@+id/mentors"
+        android:enabled="true"
+        android:title="Mentors"
+        android:icon="@drawable/ic_mentor"/>
+
+    <item
+        android:id="@+id/blogs"
+        android:enabled="true"
+        android:title="Blogs"
+        android:icon="@drawable/ic_baseline_add_alert_24"/>
+
+    <item
+        android:id="@+id/more"
+        android:enabled="true"
+        android:title="More"
+        android:icon="@drawable/ic_baseline_more_horiz_24"/>
+
+</menu>

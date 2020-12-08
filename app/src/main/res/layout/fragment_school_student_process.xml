@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_linear_after_payment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/logo"
+                android:transitionName="logo" />
+
+            <TextView
+                android:id="@+id/school_dashboard_follow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/logo"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="20dp"
+                android:text="Follow the below steps to start your journey ahead."
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/school_dashboard_week1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/school_dashboard_follow"
+                android:layout_margin="16dp"
+                android:fontFamily="@font/roboto"
+                android:text="Week 1: Fill up the onboarding questionnaire, time tracker, priority matrix and sports track."
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/school_downward1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_baseline_arrow_downward_24" />
+
+            <TextView
+                android:id="@+id/school_dashboard_week2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/school_dashboard_week1"
+                android:layout_margin="16dp"
+                android:fontFamily="@font/roboto"
+                android:text="Week 2: You'll have your first mentoring session with one of our mentors. You can schedule a session as per your convenience. Fill up college track template if you're a class 11/12 student."
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/school_downward2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_baseline_arrow_downward_24" />
+
+            <TextView
+                android:id="@+id/school_dashboard_week3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:fontFamily="@font/roboto"
+                android:text="Start filling Goals and Affirmation template from 2nd week onwards on a daily basis, Mentor will explain it to you. Fill Weekly template on weekends"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/school_downward3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_baseline_arrow_downward_24" />
+
+            <TextView
+                android:id="@+id/school_dashboard_week4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:fontFamily="@font/roboto"
+                android:text="You can schedule Mentoring sessions as per your convenience now. After 3 mentoring sessions you'll have a limit of 120 minutes of mentoring per month."
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/after_payment_school_chatbot"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="150dp"
+                android:layout_marginTop="20dp"
+                android:padding="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/chatbot" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:background="@color/colorRow"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/row_height">
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.2"
+        android:layout_gravity="center|start"/>
+    <TextView
+        android:layout_width="@dimen/cell_width"
+        android:id="@+id/tvSerialNumber"
+        android:layout_marginStart="@dimen/margin"
+        android:gravity="center|start"
+        android:textColor="#000000"
+        android:layout_height="match_parent"/>
+
+
+    <TextView
+        android:layout_width="@dimen/cell_width"
+        android:id="@+id/tvCollege"
+        android:layout_marginStart="@dimen/margin"
+        android:gravity="center|start"
+        android:textColor="#000000"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:layout_width="@dimen/cell_width"
+        android:id="@+id/tvCourse"
+        android:layout_marginStart="@dimen/margin"
+        android:gravity="center|start"
+        android:textColor="#000000"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:layout_width="@dimen/cell_width"
+        android:id="@+id/tvSelection"
+        android:layout_marginStart="@dimen/margin"
+        android:gravity="center|start"
+        android:textColor="#000000"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:layout_width="@dimen/cell_width"
+        android:id="@+id/tvAchieve"
+        android:layout_marginStart="@dimen/margin"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:layout_width="@dimen/cell_width"
+        android:id="@+id/tvImprove"
+        android:layout_marginStart="@dimen/margin"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

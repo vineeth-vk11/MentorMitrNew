@@ -1,0 +1,944 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    >
+
+<RelativeLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OptionTemplate"
+    android:layout_marginTop="20dp">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:elevation="3dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        card_view:cardCornerRadius="20dp">
+
+        <TextView style="?android:textAppearanceMedium"
+            android:padding="16dp"
+            android:id="@+id/textview"
+            android:lineSpacingMultiplier="1.2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choose your Career"
+            android:gravity="center"
+            android:textColor="#F9A620"
+            android:layout_marginBottom="20dp"
+            android:textSize="25sp" />
+    </androidx.cardview.widget.CardView>
+
+
+
+<LinearLayout
+    android:id="@+id/linearLayout"
+    android:layout_below="@+id/card"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:orientation="vertical">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_eng"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:elevation="1dp"
+        android:layout_marginTop="20dp"
+        card_view:cardBackgroundColor="#F1F9FA"
+        android:layout_marginStart="10dp"
+        card_view:cardCornerRadius="20dp">
+
+
+    <CheckBox
+        android:id="@+id/engineering"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:checked="false"
+        android:padding="20dp"
+        android:layout_marginStart="15dp"
+        android:text="Engineering"
+        android:textColor="#E91E63"
+        android:textSize="20sp"
+        android:textStyle="bold|italic" />
+        <TextView style="?android:textAppearanceMedium"
+            android:padding="16dp"
+            android:id="@+id/text_eng"
+            android:layout_marginTop="35dp"
+            android:lineSpacingMultiplier="1.2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/eng"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:textColor="#101010"
+            android:layout_marginBottom="05dp"
+            android:textSize="15sp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_med"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:elevation="1dp"
+        android:layout_marginTop="20dp"
+        card_view:cardBackgroundColor="#F1F9FA"
+        android:layout_marginStart="10dp"
+        card_view:cardCornerRadius="20dp">
+
+    <CheckBox
+        android:id="@+id/medical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:checked="false"
+        android:padding="20dp"
+        android:text="Medical"
+        android:textColor="#E91E63"
+        android:layout_marginStart="15dp"
+        android:textSize="20sp"
+        android:textStyle="bold|italic" />
+        <TextView style="?android:textAppearanceMedium"
+            android:padding="16dp"
+            android:id="@+id/text_medical"
+            android:layout_marginTop="35dp"
+            android:lineSpacingMultiplier="1.2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/medical"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:textColor="#101010"
+            android:layout_marginBottom="05dp"
+            android:textSize="15sp" />
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_science"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:elevation="1dp"
+        android:layout_marginTop="20dp"
+        card_view:cardBackgroundColor="#F1F9FA"
+        android:layout_marginStart="10dp"
+        card_view:cardCornerRadius="20dp">
+
+    <CheckBox
+        android:id="@+id/science"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:checked="false"
+        android:padding="20dp"
+        android:text="Science/Mathematics"
+        android:textColor="#E91E63"
+        android:layout_marginStart="15dp"
+        android:textSize="20sp"
+        android:textStyle="bold|italic" />
+        <TextView style="?android:textAppearanceMedium"
+            android:padding="16dp"
+            android:id="@+id/text_science"
+            android:layout_marginTop="35dp"
+            android:lineSpacingMultiplier="1.2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/science"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:textColor="#101010"
+            android:layout_marginBottom="05dp"
+            android:textSize="15sp" />
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_pharma"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:elevation="1dp"
+        android:layout_marginTop="20dp"
+        card_view:cardBackgroundColor="#F1F9FA"
+        android:layout_marginStart="10dp"
+        card_view:cardCornerRadius="20dp">
+
+    <CheckBox
+        android:id="@+id/pharma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:checked="false"
+        android:padding="20dp"
+        android:text="B.Pharma"
+        android:textColor="#E91E63"
+        android:layout_marginStart="15dp"
+        android:textSize="20sp"
+        android:textStyle="bold|italic" />
+        <TextView style="?android:textAppearanceMedium"
+            android:padding="16dp"
+            android:id="@+id/text_pharma"
+            android:layout_marginTop="35dp"
+            android:lineSpacingMultiplier="1.2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pharma"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:textColor="#101010"
+            android:layout_marginBottom="05dp"
+            android:textSize="15sp" />
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_bca"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:elevation="1dp"
+        android:layout_marginTop="20dp"
+        card_view:cardBackgroundColor="#F1F9FA"
+        android:layout_marginStart="10dp"
+        card_view:cardCornerRadius="20dp">
+
+    <CheckBox
+        android:id="@+id/bca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:checked="false"
+        android:padding="20dp"
+        android:text="BCA"
+        android:textColor="#E91E63"
+        android:layout_marginStart="15dp"
+        android:textSize="20sp"
+        android:textStyle="bold|italic" />
+        <TextView style="?android:textAppearanceMedium"
+            android:padding="16dp"
+            android:id="@+id/text_bca"
+            android:layout_marginTop="35dp"
+            android:lineSpacingMultiplier="1.2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/bca"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:textColor="#101010"
+            android:layout_marginBottom="05dp"
+            android:textSize="15sp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_forces"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:elevation="1dp"
+        android:layout_marginTop="20dp"
+        card_view:cardBackgroundColor="#F1F9FA"
+        android:layout_marginStart="10dp"
+        card_view:cardCornerRadius="20dp">
+
+        <CheckBox
+            android:id="@+id/forces"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:checked="false"
+            android:padding="20dp"
+            android:text="Indian Armed Forces"
+            android:textColor="#E91E63"
+            android:layout_marginStart="15dp"
+            android:textSize="20sp"
+            android:textStyle="bold|italic" />
+        <TextView style="?android:textAppearanceMedium"
+            android:padding="16dp"
+            android:id="@+id/text_forces"
+            android:layout_marginTop="35dp"
+            android:lineSpacingMultiplier="1.2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/bca"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:textColor="#101010"
+            android:layout_marginBottom="05dp"
+            android:textSize="15sp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_pilot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:elevation="1dp"
+        android:layout_marginTop="20dp"
+        card_view:cardBackgroundColor="#F1F9FA"
+        android:layout_marginStart="10dp"
+        card_view:cardCornerRadius="20dp">
+
+        <CheckBox
+            android:id="@+id/pilot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:checked="false"
+            android:padding="20dp"
+            android:text="Pilot"
+            android:textColor="#E91E63"
+            android:layout_marginStart="15dp"
+            android:textSize="20sp"
+            android:textStyle="bold|italic" />
+        <TextView style="?android:textAppearanceMedium"
+            android:padding="16dp"
+            android:id="@+id/text_pilot"
+            android:layout_marginTop="35dp"
+            android:lineSpacingMultiplier="1.2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/bca"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:textColor="#101010"
+            android:layout_marginBottom="05dp"
+            android:textSize="15sp" />
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_bcom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:elevation="1dp"
+        android:layout_marginTop="20dp"
+        card_view:cardBackgroundColor="#F1F9FA"
+        android:layout_marginStart="10dp"
+        card_view:cardCornerRadius="20dp">
+
+        <CheckBox
+            android:id="@+id/bcom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:checked="false"
+            android:padding="20dp"
+            android:text="B.Com/Economics"
+            android:textColor="#E91E63"
+            android:layout_marginStart="15dp"
+            android:textSize="20sp"
+            android:textStyle="bold|italic" />
+        <TextView style="?android:textAppearanceMedium"
+            android:padding="16dp"
+            android:id="@+id/text_bcom"
+            android:layout_marginTop="35dp"
+            android:lineSpacingMultiplier="1.2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/bcom"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:textColor="#101010"
+            android:layout_marginBottom="05dp"
+            android:textSize="15sp" />
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_ba"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:elevation="1dp"
+        android:layout_marginTop="20dp"
+        card_view:cardBackgroundColor="#F1F9FA"
+        android:layout_marginStart="10dp"
+        card_view:cardCornerRadius="20dp">
+
+        <CheckBox
+            android:id="@+id/ba"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:checked="false"
+            android:padding="20dp"
+            android:text="B.A Hons"
+            android:textColor="#E91E63"
+            android:layout_marginStart="15dp"
+            android:textSize="20sp"
+            android:textStyle="bold|italic" />
+        <TextView style="?android:textAppearanceMedium"
+            android:padding="16dp"
+            android:id="@+id/text_ba"
+            android:layout_marginTop="35dp"
+            android:lineSpacingMultiplier="1.2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ba"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:textColor="#101010"
+            android:layout_marginBottom="05dp"
+            android:textSize="15sp" />
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_vocational"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:elevation="1dp"
+        android:layout_marginTop="20dp"
+        card_view:cardBackgroundColor="#F1F9FA"
+        android:layout_marginStart="10dp"
+        card_view:cardCornerRadius="20dp">
+
+        <CheckBox
+            android:id="@+id/vocational"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:checked="false"
+            android:padding="20dp"
+            android:text="Vocational Courses"
+            android:textColor="#E91E63"
+            android:layout_marginStart="15dp"
+            android:textSize="20sp"
+            android:textStyle="bold|italic" />
+        <TextView style="?android:textAppearanceMedium"
+            android:padding="16dp"
+            android:id="@+id/text_vocational"
+            android:layout_marginTop="35dp"
+            android:lineSpacingMultiplier="1.2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/vocational"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:textColor="#101010"
+            android:layout_marginBottom="05dp"
+            android:textSize="15sp" />
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_languages"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:elevation="1dp"
+        android:layout_marginTop="20dp"
+        card_view:cardBackgroundColor="#F1F9FA"
+        android:layout_marginStart="10dp"
+        card_view:cardCornerRadius="20dp">
+
+        <CheckBox
+            android:id="@+id/languages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:checked="false"
+            android:padding="20dp"
+            android:text="Languages"
+            android:textColor="#E91E63"
+            android:layout_marginStart="15dp"
+            android:textSize="20sp"
+            android:textStyle="bold|italic" />
+        <TextView style="?android:textAppearanceMedium"
+            android:padding="16dp"
+            android:id="@+id/text_languages"
+            android:layout_marginTop="35dp"
+            android:lineSpacingMultiplier="1.2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/languages"
+            android:gravity="center"
+            android:textColor="#101010"
+            android:layout_marginBottom="05dp"
+            android:textSize="15sp" />
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_iim"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:elevation="1dp"
+        android:layout_marginTop="20dp"
+        card_view:cardBackgroundColor="#F1F9FA"
+        android:layout_marginStart="10dp"
+        card_view:cardCornerRadius="20dp">
+
+    <CheckBox
+        android:id="@+id/iim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:checked="false"
+        android:padding="20dp"
+        android:text="IIM(5 years MBA)"
+        android:textColor="#E91E63"
+        android:layout_marginStart="15dp"
+        android:textSize="20sp"
+        android:textStyle="bold|italic" />
+        <TextView style="?android:textAppearanceMedium"
+            android:padding="16dp"
+            android:id="@+id/text_iim"
+            android:layout_marginTop="35dp"
+            android:lineSpacingMultiplier="1.2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/iim"
+            android:gravity="center"
+            android:textColor="#101010"
+            android:layout_marginBottom="05dp"
+            android:textSize="15sp" />
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_du"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:elevation="1dp"
+        android:layout_marginTop="20dp"
+        card_view:cardBackgroundColor="#F1F9FA"
+        android:layout_marginStart="10dp"
+        card_view:cardCornerRadius="20dp">
+
+    <CheckBox
+        android:id="@+id/du"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:checked="false"
+        android:padding="20dp"
+        android:text="Du Jat"
+        android:textColor="#E91E63"
+        android:layout_marginStart="15dp"
+        android:textSize="20sp"
+        android:textStyle="bold|italic" />
+        <TextView style="?android:textAppearanceMedium"
+            android:padding="16dp"
+            android:id="@+id/text_du"
+            android:layout_marginTop="35dp"
+            android:lineSpacingMultiplier="1.2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/du"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:textColor="#101010"
+            android:layout_marginBottom="05dp"
+            android:textSize="15sp" />
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_bba"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:elevation="1dp"
+        android:layout_marginTop="20dp"
+        card_view:cardBackgroundColor="#F1F9FA"
+        android:layout_marginStart="10dp"
+        card_view:cardCornerRadius="20dp">
+
+        <CheckBox
+            android:id="@+id/bba"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:checked="false"
+            android:padding="20dp"
+            android:text="BBA"
+            android:textColor="#E91E63"
+            android:layout_marginStart="15dp"
+            android:textSize="20sp"
+            android:textStyle="bold|italic" />
+        <TextView style="?android:textAppearanceMedium"
+            android:padding="16dp"
+            android:id="@+id/text_bba"
+            android:layout_marginTop="35dp"
+            android:lineSpacingMultiplier="1.2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/bba"
+            android:gravity="center"
+            android:textColor="#101010"
+            android:layout_marginBottom="05dp"
+            android:textSize="15sp" />
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_law"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:elevation="1dp"
+        android:layout_marginTop="20dp"
+        card_view:cardBackgroundColor="#F1F9FA"
+        android:layout_marginStart="10dp"
+        card_view:cardCornerRadius="20dp">
+
+        <CheckBox
+            android:id="@+id/law"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:checked="false"
+            android:padding="20dp"
+            android:text="Law"
+            android:textColor="#E91E63"
+            android:layout_marginStart="15dp"
+            android:textSize="20sp"
+            android:textStyle="bold|italic" />
+        <TextView style="?android:textAppearanceMedium"
+            android:padding="16dp"
+            android:id="@+id/text_law"
+            android:layout_marginTop="35dp"
+            android:lineSpacingMultiplier="1.2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/law"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:textColor="#101010"
+            android:layout_marginBottom="05dp"
+            android:textSize="15sp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_ca"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:elevation="1dp"
+        android:layout_marginTop="20dp"
+        card_view:cardBackgroundColor="#F1F9FA"
+        android:layout_marginStart="10dp"
+        card_view:cardCornerRadius="20dp">
+
+    <CheckBox
+        android:id="@+id/ca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:checked="false"
+        android:padding="20dp"
+        android:text="CA/CS/CMA"
+        android:textColor="#E91E63"
+        android:layout_marginStart="15dp"
+        android:textSize="20sp"
+        android:textStyle="bold|italic" />
+        <TextView style="?android:textAppearanceMedium"
+            android:padding="16dp"
+            android:id="@+id/text_ca"
+            android:layout_marginTop="35dp"
+            android:lineSpacingMultiplier="1.2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ca"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:textColor="#101010"
+            android:layout_marginBottom="05dp"
+            android:textSize="15sp" />
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_performing"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:elevation="1dp"
+        android:layout_marginTop="20dp"
+        card_view:cardBackgroundColor="#F1F9FA"
+        android:layout_marginStart="10dp"
+        card_view:cardCornerRadius="20dp">
+
+    <CheckBox
+        android:id="@+id/performing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:checked="false"
+        android:padding="20dp"
+        android:text="Performing Arts"
+        android:textColor="#E91E63"
+        android:layout_marginStart="15dp"
+        android:textSize="20sp"
+        android:textStyle="bold|italic" />
+        <TextView style="?android:textAppearanceMedium"
+            android:padding="16dp"
+            android:id="@+id/text_performing"
+            android:layout_marginTop="35dp"
+            android:lineSpacingMultiplier="1.2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/performing"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:textColor="#101010"
+            android:layout_marginBottom="05dp"
+            android:textSize="15sp" />
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_fine"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:elevation="1dp"
+        android:layout_marginTop="20dp"
+        card_view:cardBackgroundColor="#F1F9FA"
+        android:layout_marginStart="10dp"
+        card_view:cardCornerRadius="20dp">
+
+    <CheckBox
+        android:id="@+id/fine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:checked="false"
+        android:padding="20dp"
+        android:text="Fine Arts"
+        android:textColor="#E91E63"
+        android:layout_marginStart="15dp"
+        android:textSize="20sp"
+        android:textStyle="bold|italic" />
+        <TextView style="?android:textAppearanceMedium"
+            android:padding="16dp"
+            android:id="@+id/text_fine"
+            android:layout_marginTop="35dp"
+            android:lineSpacingMultiplier="1.2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fine"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:textColor="#101010"
+            android:layout_marginBottom="05dp"
+            android:textSize="15sp" />
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_visual"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:elevation="1dp"
+        android:layout_marginTop="20dp"
+        card_view:cardBackgroundColor="#F1F9FA"
+        android:layout_marginStart="10dp"
+        card_view:cardCornerRadius="20dp">
+
+    <CheckBox
+        android:id="@+id/visual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:checked="false"
+        android:padding="20dp"
+        android:text="Visual Arts"
+        android:textColor="#E91E63"
+        android:layout_marginStart="15dp"
+        android:textSize="20sp"
+        android:textStyle="bold|italic" />
+        <TextView style="?android:textAppearanceMedium"
+            android:padding="16dp"
+            android:id="@+id/text_visual"
+            android:layout_marginTop="35dp"
+            android:lineSpacingMultiplier="1.2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/visual"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:textColor="#101010"
+            android:layout_marginBottom="05dp"
+            android:textSize="15sp" />
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_design"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:elevation="1dp"
+        android:layout_marginTop="20dp"
+        card_view:cardBackgroundColor="#F1F9FA"
+        android:layout_marginStart="10dp"
+        card_view:cardCornerRadius="20dp">
+
+    <CheckBox
+        android:id="@+id/design"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:checked="false"
+        android:padding="20dp"
+        android:text="Design"
+        android:textColor="#E91E63"
+        android:layout_marginStart="15dp"
+        android:textSize="20sp"
+        android:textStyle="bold|italic" />
+        <TextView style="?android:textAppearanceMedium"
+            android:padding="16dp"
+            android:id="@+id/text_design"
+            android:layout_marginTop="35dp"
+            android:lineSpacingMultiplier="1.2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/design"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:textColor="#101010"
+            android:layout_marginBottom="05dp"
+            android:textSize="15sp" />
+    </androidx.cardview.widget.CardView>
+    <!--
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_sports"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:elevation="1dp"
+        android:layout_marginTop="20dp"
+        card_view:cardBackgroundColor="#F1F9FA"
+        android:layout_marginStart="10dp"
+        card_view:cardCornerRadius="20dp">-->
+<!--
+    <CheckBox
+        android:id="@+id/sports"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:checked="false"
+        android:padding="20dp"
+        android:text="Sports"
+        android:textColor="#E91E63"
+        android:layout_marginStart="15dp"
+        android:textSize="20sp"
+        android:textStyle="bold|italic" />
+    <TextView style="?android:textAppearanceMedium"
+        android:padding="16dp"
+        android:id="@+id/text_sports"
+        android:layout_marginTop="35dp"
+        android:lineSpacingMultiplier="1.2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sports"
+        android:layout_marginLeft="10dp"
+        android:gravity="center"
+        android:textColor="#101010"
+        android:layout_marginBottom="05dp"
+        android:textSize="15sp" />
+    </androidx.cardview.widget.CardView>-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_enterpreneurship"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:elevation="1dp"
+        android:layout_marginTop="20dp"
+        card_view:cardBackgroundColor="#F1F9FA"
+        android:layout_marginStart="10dp"
+        card_view:cardCornerRadius="20dp">
+
+    <CheckBox
+        android:id="@+id/enterpreneurship"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:checked="false"
+        android:padding="20dp"
+        android:text="Enterpreneurship"
+        android:textColor="#E91E63"
+        android:layout_marginStart="15dp"
+        android:textSize="20sp"
+        android:textStyle="bold|italic" />
+        <TextView style="?android:textAppearanceMedium"
+            android:padding="16dp"
+            android:id="@+id/text_enterpreneurship"
+            android:layout_marginTop="35dp"
+            android:lineSpacingMultiplier="1.2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/enterpreneurship"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:textColor="#101010"
+            android:layout_marginBottom="05dp"
+            android:textSize="15sp" />
+           </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_traditional"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:elevation="1dp"
+        android:layout_marginTop="20dp"
+        card_view:cardBackgroundColor="#F1F9FA"
+        android:layout_marginStart="10dp"
+        card_view:cardCornerRadius="20dp">
+
+    <CheckBox
+        android:id="@+id/traditional"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:checked="false"
+        android:padding="20dp"
+        android:text="Non-Traditional"
+        android:textColor="#E91E63"
+        android:layout_marginStart="15dp"
+        android:textSize="20sp"
+        android:textStyle="bold|italic" />
+
+        <TextView style="?android:textAppearanceMedium"
+            android:padding="16dp"
+            android:id="@+id/text_traditional"
+            android:layout_marginTop="35dp"
+            android:lineSpacingMultiplier="1.2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/traditional"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:textColor="#101010"
+            android:layout_marginBottom="05dp"
+            android:textSize="15sp" />
+            </androidx.cardview.widget.CardView>
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:text="SUBMIT"
+        android:id="@+id/submit"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/oval"
+        android:textColor="#FFF"
+        android:textSize="16sp" />
+</LinearLayout>
+
+</RelativeLayout>
+</androidx.core.widget.NestedScrollView>

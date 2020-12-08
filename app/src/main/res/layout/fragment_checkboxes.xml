@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:elevation="3dp"
+                card_view:cardBackgroundColor="#58bbc8"
+                android:layout_marginStart="10dp"
+                card_view:cardCornerRadius="20dp">
+
+            <TextView style="?android:textAppearanceMedium"
+                      android:padding="16dp"
+                      android:id="@+id/textview_q_title"
+                      android:lineSpacingMultiplier="1.2"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="Title"
+                android:gravity="center"
+                      android:textColor="#FFFFFF"
+                      android:layout_marginBottom="20dp"
+                android:textSize="20sp" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:elevation="3dp"
+                card_view:cardBackgroundColor="#F1F9FA"
+                android:layout_marginStart="10dp"
+                card_view:cardCornerRadius="10dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:id="@+id/linearLayout_checkboxes"></LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+    <include layout="@layout/footer"
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"></include>
+
+
+</LinearLayout>
