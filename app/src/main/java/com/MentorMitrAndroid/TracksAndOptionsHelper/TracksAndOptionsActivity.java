@@ -26,6 +26,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -77,15 +78,11 @@ public class TracksAndOptionsActivity extends AppCompatActivity {
         String user_id = mAuth.getCurrentUser().getUid();
         DatabaseReference subDatabaseReference = mdatabase.child(user_id).child("options");
 
-        DatabaseReference subDatabaseReference1 = mdatabase.child(user_id).child("cbase");
-
         submit.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
             public void onClick(View v) {
-                List<String> optionsList = new ArrayList<>();
-
-                List<String> cbase = new ArrayList<>();
+                ArrayList<String> optionsList = new ArrayList<>();
 
                 if (engineering.isChecked()) {
                     optionsList.add("Engineering");
@@ -158,7 +155,15 @@ public class TracksAndOptionsActivity extends AppCompatActivity {
                 }
 
                 if(optionsList.size() != 0){
-                    subDatabaseReference.setValue(optionsList).addOnCompleteListener(new OnCompleteListener<Void>() {
+
+                    FirebaseFirestore db;
+                    db = FirebaseFirestore.getInstance();
+
+                    HashMap<String, Object> data = new HashMap<>();
+                    data.put("options",optionsList);
+                    
+                    db.collection("TracksAndOptions").document(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                            .set(data).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             Toast.makeText(getApplicationContext(), "Options saved successfully",Toast.LENGTH_SHORT).show();

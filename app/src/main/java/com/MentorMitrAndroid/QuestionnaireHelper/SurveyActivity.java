@@ -76,6 +76,9 @@ public class SurveyActivity extends AppCompatActivity {
         if(getIntent().getExtras().getString("type") != null){
             type = getIntent().getExtras().getString("type");
         }
+        else {
+            type = "normal";
+        }
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         assert referenceString != null;

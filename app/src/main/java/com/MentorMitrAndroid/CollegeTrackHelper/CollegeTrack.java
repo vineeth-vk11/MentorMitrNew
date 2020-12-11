@@ -16,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.MentorMitrAndroid.AfterPaymentCollegeStudentDashboard.AfterPaymentCollegeStudentDashboardActivity;
 import com.MentorMitrAndroid.AfterPaymentStudentDashboard.AfterPaymentSchoolStudentDashboardActivity;
 import com.MentorMitrAndroid.MainActivity;
 import com.MentorMitrAndroid.QuestionnaireHelper.models.StoreItems;
@@ -142,7 +143,12 @@ public class CollegeTrack extends AppCompatActivity {
                 userMap.put("name", currentUser.getDisplayName());
                 mdatabase.setValue(userMap);
                 StoreItems store=new StoreItems(serial,college,course,selection,achieve,improve);
-                mdatabase.child("college_options").setValue(store);
+                mdatabase.child("college_options").setValue(store).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+
+                    }
+                });
 
 
                 db.collection("users").document(currentUser.getUid()).get().addOnCompleteListener(task -> {
@@ -221,7 +227,7 @@ public class CollegeTrack extends AppCompatActivity {
                 startActivity(schooldashintent);
                 break;
             case "College":
-                Intent collegedashintent = new Intent(CollegeTrack.this, MainActivity.class);
+                Intent collegedashintent = new Intent(CollegeTrack.this, AfterPaymentCollegeStudentDashboardActivity.class);
                 collegedashintent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(collegedashintent);
                 break;

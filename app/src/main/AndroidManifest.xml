@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MentorMitr">
-        <activity android:name=".MentorDashboard.WorkingDetailsForMentorActivity"></activity>
+        <activity android:name=".MentorAnswersHelper.MentorCollegeTrackAnswersActivity"></activity>
+        <activity android:name=".MentorAnswersHelper.MentorTracksAndOptionsActivity" />
+        <activity android:name=".MentorAnswersHelper.MentorSportsAnswersActivity" />
+        <activity android:name=".MentorAnswersHelper.MentorQuestionnaireAnswersActivity" />
+        <activity android:name=".MentorDashboard.WorkingDetailsForMentorActivity" />
         <activity android:name=".MentorDashboard.CollegeDetailsForMentorActivity" />
         <activity android:name=".AfterPaymentCollegeStudentDashboard.AfterPaymentCollegeStudentDashboardActivity" />
         <activity android:name=".AfterPaymentWorkingProfessionalDashboard.AfterPaymentWorkingProfessionalActivity" />

@@ -128,6 +128,7 @@ public class StudentDashboardFragment extends Fragment {
     void callSurveyIntent(String questionReference) {
         Intent surveyIntent = new Intent(getContext(), SurveyActivity.class);
         surveyIntent.putExtra("reference", questionReference);
+        surveyIntent.putExtra("type","normal");
         if(questionReference.equalsIgnoreCase("questions_section_1")) {
             startActivityForResult(surveyIntent, 1337);
         }

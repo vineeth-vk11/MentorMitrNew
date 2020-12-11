@@ -91,6 +91,7 @@
 
     </LinearLayout>
     <LinearLayout
+        android:visibility="gone"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -187,6 +188,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="16dp"
+        android:visibility="gone"
         android:layout_below="@+id/llForm">
     </androidx.recyclerview.widget.RecyclerView>
 

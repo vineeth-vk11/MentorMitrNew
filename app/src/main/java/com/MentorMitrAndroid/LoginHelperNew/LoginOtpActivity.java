@@ -16,6 +16,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.MentorMitrAndroid.AfterPaymentStudentDashboard.AfterPaymentSchoolStudentDashboardActivity;
+import com.MentorMitrAndroid.BeforePaymentDashboardHelper.BeforePaymentDashboardActivity;
 import com.MentorMitrAndroid.MainActivity;
 import com.MentorMitrAndroid.MentorDashboard.MentorDashboardActivity;
 import com.MentorMitrAndroid.R;
@@ -164,24 +165,31 @@ public class LoginOtpActivity extends AppCompatActivity {
                                 if(documentSnapshot.exists()){
 
                                     String type = documentSnapshot.getString("type");
+                                    Boolean paid = documentSnapshot.getBoolean("paid");
 
-                                    if(type.equals("School")){
-                                        Intent intent = new Intent(LoginOtpActivity.this, AfterPaymentSchoolStudentDashboardActivity.class);
+                                    if(paid){
+                                        if(type.equals("School")){
+                                            Intent intent = new Intent(LoginOtpActivity.this, AfterPaymentSchoolStudentDashboardActivity.class);
+                                            startActivity(intent);
+                                            finish();
+                                        }
+                                        else if(type.equals("College")){
+
+                                        }
+                                        else if(type.equals("Working")){
+
+                                        }
+                                        else if(type.equals("Mentor")){
+                                            Intent intent = new Intent(LoginOtpActivity.this, MentorDashboardActivity.class);
+                                            startActivity(intent);
+                                            finish();
+                                        }
+                                    }
+                                    else {
+                                        Intent intent = new Intent(getApplicationContext(), BeforePaymentDashboardActivity.class);
                                         startActivity(intent);
                                         finish();
                                     }
-                                    else if(type.equals("College")){
-
-                                    }
-                                    else if(type.equals("Working")){
-
-                                    }
-                                    else if(type.equals("Mentor")){
-                                        Intent intent = new Intent(LoginOtpActivity.this, MentorDashboardActivity.class);
-                                        startActivity(intent);
-                                        finish();
-                                    }
-
                                 }
                                 else {
                                     Intent intent = new Intent(LoginOtpActivity.this, LoginEnterDetailsActivity.class);
