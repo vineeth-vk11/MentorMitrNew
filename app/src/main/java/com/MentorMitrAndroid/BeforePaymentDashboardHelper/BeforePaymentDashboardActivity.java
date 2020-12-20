@@ -9,6 +9,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.MentorMitrAndroid.AfterPaymentCollegeStudentDashboard.AfterPaymentCollegeStudentDashboardActivity;
+import com.MentorMitrAndroid.AfterPaymentStudentDashboard.AfterPaymentSchoolStudentDashboardActivity;
+import com.MentorMitrAndroid.AfterPaymentWorkingProfessionalDashboard.AfterPaymentWorkingProfessionalActivity;
 import com.MentorMitrAndroid.BlogsHelper.BlogsFragment;
 import com.MentorMitrAndroid.MainActivity;
 import com.MentorMitrAndroid.MentorsHelper.MentorsFragment;
@@ -24,11 +27,11 @@ public class BeforePaymentDashboardActivity extends AppCompatActivity implements
 
     BottomNavigationView bottomNavigationView;
 
-    BeforePaymentHomeFragment beforePaymentHomeFragment = new BeforePaymentHomeFragment();
     MentorsFragment mentorsFragment = new MentorsFragment();
     MoreFragment moreFragment = new MoreFragment();
     ProgramsFragment programsFragment = new ProgramsFragment();
     BlogsFragment blogsFragment = new BlogsFragment();
+    BeforePaymentHomeFragment beforePaymentHomeFragment = new BeforePaymentHomeFragment();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,32 +58,28 @@ public class BeforePaymentDashboardActivity extends AppCompatActivity implements
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
         bottomNavigationView.setSelectedItemId(R.id.home);
-
     }
 
     public void moveToPage(String type) {
         switch (type) {
             case "School":
-                Intent schooldashintent = new Intent(BeforePaymentDashboardActivity.this, MainActivity.class);
+                Intent schooldashintent = new Intent(BeforePaymentDashboardActivity.this, AfterPaymentSchoolStudentDashboardActivity.class);
                 schooldashintent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(schooldashintent);
                 finish();
                 break;
             case "College":
-                Intent collegedashintent = new Intent(BeforePaymentDashboardActivity.this, MainActivity.class);
+                Intent collegedashintent = new Intent(BeforePaymentDashboardActivity.this, AfterPaymentCollegeStudentDashboardActivity.class);
                 collegedashintent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(collegedashintent);
                 finish();
                 break;
             case "Parent":
-                Intent parentdashintent = new Intent(BeforePaymentDashboardActivity.this, MainActivity.class);
-                parentdashintent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                startActivity(parentdashintent);
-                finish();
+
                 break;
 
             case "Working":
-                Intent i = new Intent(BeforePaymentDashboardActivity.this, MainActivity.class);
+                Intent i = new Intent(BeforePaymentDashboardActivity.this, AfterPaymentWorkingProfessionalActivity.class);
                 i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(i);
                 finish();

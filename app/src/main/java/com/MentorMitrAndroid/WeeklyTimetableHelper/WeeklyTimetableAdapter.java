@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.MentorMitrAndroid.R;
@@ -16,10 +17,21 @@ public class WeeklyTimetableAdapter extends RecyclerView.Adapter<WeeklyTimetable
 
     Context context;
     ArrayList<WeeklyTimetableModel> weeklyTimetableModelArrayList;
+    String from;
+    ArrayList<String> activities = new ArrayList<>();
+    FragmentManager fragmentManager;
+    String id;
+    String day;
 
-    public WeeklyTimetableAdapter(Context context, ArrayList<WeeklyTimetableModel> weeklyTimetableModelArrayList) {
+    public WeeklyTimetableAdapter(Context context, ArrayList<WeeklyTimetableModel> weeklyTimetableModelArrayList, String from, ArrayList<String> activities, FragmentManager fragmentManager,
+                                  String id, String day) {
         this.context = context;
         this.weeklyTimetableModelArrayList = weeklyTimetableModelArrayList;
+        this.from = from;
+        this.activities = activities;
+        this.fragmentManager = fragmentManager;
+        this.id = id;
+        this.day = day;
     }
 
     @NonNull
@@ -34,6 +46,19 @@ public class WeeklyTimetableAdapter extends RecyclerView.Adapter<WeeklyTimetable
     public void onBindViewHolder(@NonNull WeeklyTimetableViewHolder holder, int position) {
         holder.timing.setText(weeklyTimetableModelArrayList.get(position).getTime());
         holder.activityDone.setText(weeklyTimetableModelArrayList.get(position).getActivity());
+
+//        if(from.equals("Mentor")){
+//            holder.editButton.setVisibility(View.VISIBLE);
+//        }
+//
+//        holder.editButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                AddWeeklyItemDialog addWeeklyItemDialog = new AddWeeklyItemDialog(activities,day,weeklyTimetableModelArrayList.get(position).getActivity()
+//                        ,weeklyTimetableModelArrayList.get(position).getTime(),id);
+//                addWeeklyItemDialog.show(fragmentManager, "Edit Activity");
+//            }
+//        });
     }
 
     @Override

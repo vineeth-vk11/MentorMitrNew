@@ -38,6 +38,7 @@ public class MondayFragment extends Fragment {
     ArrayList<WeeklyTimetableModel> weeklyTimetableModelArrayList;
 
     String id;
+    String from;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -62,6 +63,8 @@ public class MondayFragment extends Fragment {
             id = FirebaseAuth.getInstance().getCurrentUser().getUid();
         }
 
+        from = getArguments().getString("from");
+
         weeklyTimetableModelArrayList = new ArrayList<>();
 
         db.collection("Activities").document(id)
@@ -80,7 +83,7 @@ public class MondayFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-                AddWeeklyItemDialog addWeeklyItemDialog = new AddWeeklyItemDialog(activities,"Monday");
+                AddWeeklyItemDialog addWeeklyItemDialog = new AddWeeklyItemDialog(activities,"Monday",null,null, FirebaseAuth.getInstance().getCurrentUser().getUid());
                 addWeeklyItemDialog.show(getFragmentManager(), "Add Activity");
 
             }
@@ -101,7 +104,7 @@ public class MondayFragment extends Fragment {
                     weeklyTimetableModelArrayList.add(weeklyTimetableModel);
                 }
 
-                WeeklyTimetableAdapter weeklyTimetableAdapter = new WeeklyTimetableAdapter(getContext(), weeklyTimetableModelArrayList);
+                WeeklyTimetableAdapter weeklyTimetableAdapter = new WeeklyTimetableAdapter(getContext(), weeklyTimetableModelArrayList, from, activities, getFragmentManager(),id, "Monday");
                 mondayRecycler.setAdapter(weeklyTimetableAdapter);
             }
         });

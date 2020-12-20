@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.MentorMitrAndroid.AfterPaymentStudentDashboard.AfterPaymentMoreFragment;
+import com.MentorMitrAndroid.AfterPaymentStudentDashboard.StudentDashboardFragment2;
 import com.MentorMitrAndroid.AfterPaymentStudentDashboard.StudentDashboardFragment3;
 import com.MentorMitrAndroid.AfterPaymentStudentDashboard.StudentDashboardFragment4;
 import com.MentorMitrAndroid.AfterPaymentWorkingProfessionalDashboard.WorkingDashboardFragment;
@@ -25,6 +26,8 @@ public class AfterPaymentCollegeStudentDashboardActivity extends AppCompatActivi
     StudentDashboardFragment3 studentDashboardFragment3 = new StudentDashboardFragment3();
     StudentDashboardFragment4 studentDashboardFragment4 = new StudentDashboardFragment4();
     AfterPaymentMoreFragment afterPaymentMoreFragment = new AfterPaymentMoreFragment();
+    StudentDashboardFragment2 studentDashboardFragment2 = new StudentDashboardFragment2();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +54,7 @@ public class AfterPaymentCollegeStudentDashboardActivity extends AppCompatActivi
             case R.id.process:
                 FragmentManager fragmentManager1 = getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction1 = fragmentManager1.beginTransaction();
-                fragmentTransaction1.replace(R.id.main_frame,timeTrackerFragment);
+                fragmentTransaction1.replace(R.id.main_frame,studentDashboardFragment2);
                 fragmentTransaction1.addToBackStack(null);
                 fragmentTransaction1.commit();
                 return true;

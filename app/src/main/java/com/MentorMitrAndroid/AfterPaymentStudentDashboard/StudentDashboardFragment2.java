@@ -9,12 +9,12 @@ import android.view.ViewGroup;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
-import com.MentorMitrAndroid.MainActivity;
+import com.MentorMitrAndroid.GradesHelper.SubjectsHelper.SubjectsActivity;
 import com.MentorMitrAndroid.R;
 
 public class StudentDashboardFragment2 extends Fragment {
 
-    CardView priority, timeTracker, goals;
+    CardView grade, timeTracker;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -22,30 +22,12 @@ public class StudentDashboardFragment2 extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_student_dashboard2, container, false);
 
-        priority = view.findViewById(R.id.priority);
-        timeTracker = view.findViewById(R.id.materialCardView2);
-        goals = view.findViewById(R.id.goals);
+        grade = view.findViewById(R.id.grades);
 
-        priority.setOnClickListener(new View.OnClickListener() {
+        grade.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getContext(), MainActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        timeTracker.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getContext(), MainActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        goals.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getContext(), MainActivity.class);
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(), SubjectsActivity.class);
                 startActivity(intent);
             }
         });

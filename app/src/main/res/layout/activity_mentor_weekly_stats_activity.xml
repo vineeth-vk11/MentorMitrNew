@@ -6,8 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".MentorWeeklyStatsHelper.MentorWeeklyStatsActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/weeklyStatsRecycler"
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/statsChart"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/suggest"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/suggest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Suggestions"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -39,6 +39,7 @@ public class WeeklyTimetableActivity extends AppCompatActivity {
     SundayFragment sundayFragment = new SundayFragment();
 
     String id;
+    String from;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,12 +51,15 @@ public class WeeklyTimetableActivity extends AppCompatActivity {
 
         tabLayout.setupWithViewPager(viewPager);
 
-        if(getIntent()!=null){
+        if(getIntent().getStringExtra("id")!=null){
             id = getIntent().getStringExtra("id");
         }
 
+        from = getIntent().getStringExtra("from");
+
         Bundle bundle = new Bundle();
         bundle.putString("id",id);
+        bundle.putString("from", from);
 
         mondayFragment.setArguments(bundle);
         tuesdayFragment.setArguments(bundle);

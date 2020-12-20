@@ -11,6 +11,7 @@ import com.MentorMitrAndroid.GoalsAndAffirmationsHelper.GoalsAndAffirmationsActi
 import com.MentorMitrAndroid.MentorAnswersHelper.MentorCollegeTrackAnswersActivity;
 import com.MentorMitrAndroid.MentorAnswersHelper.MentorQuestionnaireAnswersActivity;
 import com.MentorMitrAndroid.MentorAnswersHelper.MentorTracksAndOptionsActivity;
+import com.MentorMitrAndroid.MentorSessionFeedbackHelper.MentorSessionFeedbackActivity;
 import com.MentorMitrAndroid.MentorWeeklyStatsHelper.MentorWeeklyStatsActivity;
 import com.MentorMitrAndroid.PriorityHelper.PrioritiesActivity;
 import com.MentorMitrAndroid.R;
@@ -18,7 +19,7 @@ import com.MentorMitrAndroid.WeeklyTimetableHelper.WeeklyTimetableActivity;
 
 public class CollegeDetailsForMentorActivity extends AppCompatActivity {
 
-    CardView questionnaire, priority, goalsAndAffirmations, weeklyTimetable, stats, tracks, college;
+    CardView questionnaire, priority, goalsAndAffirmations, weeklyTimetable, stats, tracks, college, feedback;
     String id;
 
     @Override
@@ -35,6 +36,16 @@ public class CollegeDetailsForMentorActivity extends AppCompatActivity {
         stats = findViewById(R.id.stats);
         questionnaire = findViewById(R.id.materialCardView);
         college = findViewById(R.id.college);
+        feedback = findViewById(R.id.mentorFeedback);
+
+        feedback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MentorSessionFeedbackActivity.class);
+                intent.putExtra("id",id);
+                startActivity(intent);
+            }
+        });
 
         college.setOnClickListener(new View.OnClickListener() {
             @Override

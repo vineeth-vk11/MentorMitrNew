@@ -1,413 +1,406 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
     android:layout_width="match_parent"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    android:layout_height="match_parent">
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <androidx.core.widget.NestedScrollView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:context=".BeforePaymentDashboardHelper.BeforePaymentHomeFragment">
 
-        <RelativeLayout
+        <androidx.cardview.widget.CardView
+            android:id="@+id/main_intro"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/main_intro"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_margin="10dp"
-                android:elevation="3dp"
-                card_view:cardBackgroundColor="@color/white"
-                android:layout_marginStart="10dp"
-                card_view:cardCornerRadius="20dp">
-
-                <TextView
-                    android:id="@+id/main_tagline"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/appbar_layout"
-                    android:layout_margin="16dp"
-                    android:layout_marginTop="50dp"
-                    android:fontFamily="@font/roboto"
-                    android:gravity="center_horizontal"
-                    android:text="@string/intro"
-                    android:textColor="@color/black"
-                    android:textSize="20sp" />
-            </androidx.cardview.widget.CardView>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_below="@+id/main_intro"
-                android:id="@+id/ll_slider">
-                <ImageSwitcher android:id="@+id/imgSw"
-                    android:layout_width="match_parent"
-                    android:layout_height="250dp"
-                    android:src="@drawable/logo"/>
-
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="5dp"
-                android:layout_below="@+id/ll_slider"
-                android:layout_marginTop="20dp"
-                android:id="@+id/ll_video"
-                android:background="?android:attr/listDivider"
-                android:orientation="horizontal" />
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/mylayout"
-                android:layout_centerHorizontal="true"
-                android:layout_below="@id/ll_video"
-                android:background="@drawable/logo">
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:layout_margin="50dp"
-                    android:layout_gravity="center_horizontal"
-                    android:id="@+id/myimage"
-                    android:src="@drawable/ic_webinar">
-                </ImageView>
-
-
-                <VideoView
-                    android:id="@+id/videoView1"
-                    android:layout_width="match_parent"
-                    android:layout_height="220dp"
-                    android:layout_margin="10dp"
-                    android:visibility="gone" />
-
-            </FrameLayout>
-
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:elevation="3dp"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView19">
 
             <TextView
-                android:id="@+id/methodology"
+                android:id="@+id/main_tagline"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/mylayout"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginBottom="16dp"
+                android:layout_below="@+id/appbar_layout"
+                android:layout_margin="16dp"
+                android:layout_marginTop="50dp"
                 android:fontFamily="@font/roboto_bold"
                 android:gravity="center_horizontal"
-                android:text="We help students and working people streamline their process of career development by understanding and customizing their needs."
+                android:text="@string/intro"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
 
-            <View
+        <ImageView
+            android:id="@+id/imageView19"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/main_intro">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="5dp"
-                android:layout_below="@+id/methodology"
-                android:background="?android:attr/listDivider" />
+                android:layout_height="match_parent">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_brief"
+                <TextView
+                    android:id="@+id/methodology"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="center_horizontal"
+                    android:text="We help students and working people streamline their process of career development by understanding and customizing their needs."
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView7">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/main_brief"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="center_horizontal"
+                    android:text="@string/brief"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/main_focus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:fontFamily="@font/bangers"
+            android:gravity="center_horizontal"
+            android:text="FOCUS AREAS"
+            android:textColor="@color/colorAccent"
+            android:textSize="50sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView9" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/main_focus">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_margin="20dp"
-                android:elevation="3dp"
-                android:layout_below="@id/methodology"
-                card_view:cardBackgroundColor="@color/white"
-                android:layout_marginStart="10dp"
-                card_view:cardCornerRadius="20dp">
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/main_focus">
 
                 <TextView
+                    android:id="@+id/focus_intro"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:layout_below="@+id/videoView1"
                     android:layout_margin="16dp"
-                    android:layout_marginTop="50dp"
-                    android:gravity="center_horizontal"
-                    android:textColor="@color/black"
                     android:fontFamily="@font/roboto_bold"
-                    android:id="@+id/main_brief"
-                    android:text="@string/brief" />
-            </androidx.cardview.widget.CardView>
+                    android:gravity="center_horizontal"
+                    android:text="Our approach and involvement are aligned with the students’ and working people’s needs, as we inculcate an understanding of self-awareness."
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="5dp"
-                android:layout_below="@+id/card_brief"
-                android:background="?android:attr/listDivider"/>
+        </androidx.cardview.widget.CardView>
 
-            <TextView
-                android:id="@+id/main_focus"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/card_brief"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginBottom="16dp"
-                android:fontFamily="@font/bangers"
-                android:gravity="center_horizontal"
-                android:text="FOCUS AREAS"
-                android:textColor="@color/colorAccent"
-                android:textSize="50sp" />
-
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_focusarea1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:elevation="3dp"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView23">
 
             <TextView
+                android:id="@+id/focus"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:layout_below="@+id/main_focus"
+                android:layout_below="@+id/appbar_layout"
                 android:layout_margin="16dp"
+                android:layout_marginTop="50dp"
                 android:gravity="center_horizontal"
+                android:text="@string/time"
                 android:textColor="@color/black"
-                android:id="@+id/focus_intro"
-                android:fontFamily="@font/roboto_bold"
-                android:text="Our approach and involvement are aligned with the students’ and working people’s needs, as we inculcate an understanding of self-awareness." />
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
 
-            <ImageView
-                android:id="@+id/timeimg"
-                android:layout_width="wrap_content"
-                android:layout_height="200dp"
-                android:layout_below="@id/focus_intro"
-                android:layout_marginTop="26dp"
-                android:gravity="center"
-                android:layout_marginRight="50dp"
-                android:layout_marginLeft="50dp"
-                android:src="@drawable/time" />
+        <ImageView
+            android:id="@+id/imageView22"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/goals"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_focusarea1" />
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_focusarea1"
+        <ImageView
+            android:id="@+id/imageView23"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/working3month"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView10" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_focusarea2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:elevation="3dp"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView22">
+
+            <TextView
+                android:id="@+id/focus2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:elevation="3dp"
-                android:layout_below="@id/timeimg"
-                android:layout_margin="10dp"
-                card_view:cardBackgroundColor="@color/white"
-                card_view:cardCornerRadius="20dp">
-
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:layout_below="@+id/appbar_layout"
-                    android:layout_margin="16dp"
-                    android:layout_marginTop="50dp"
-                    android:gravity="center_horizontal"
-                    android:textColor="@color/black"
-                    android:id="@+id/focus"
-                    android:text="@string/time" />
-            </androidx.cardview.widget.CardView>
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="200dp"
-                android:src="@drawable/goals"
-                android:layout_marginTop="26dp"
-                android:gravity="center"
-                android:id="@+id/goalimg"
-                android:layout_below="@+id/card_focusarea1"
-                android:layout_marginRight="50dp"
-                android:layout_marginLeft="50dp" />
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_focusarea2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:elevation="3dp"
-                android:layout_below="@id/goalimg"
-                android:layout_margin="10dp"
-                card_view:cardBackgroundColor="@color/white"
-                card_view:cardCornerRadius="20dp">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:layout_below="@+id/appbar_layout"
-                    android:layout_margin="16dp"
-                    android:layout_marginTop="50dp"
-                    android:gravity="center_horizontal"
-                    android:textColor="@color/black"
-                    android:id="@+id/focus2"
-                    android:text="@string/goals"/>
-            </androidx.cardview.widget.CardView>
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="200dp"
-                android:layout_marginTop="26dp"
-                android:gravity="center"
-                android:layout_marginLeft="50dp"
-                android:layout_marginRight="50dp"
-                android:id="@+id/softimg"
-                android:layout_below="@+id/card_focusarea2"
-                android:src="@drawable/softskills" />
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_focusarea3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:elevation="3dp"
-                android:layout_below="@id/softimg"
-                android:layout_margin="10dp"
-                card_view:cardCornerRadius="20dp">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:layout_below="@+id/appbar_layout"
-                    android:layout_margin="16dp"
-                    android:layout_marginTop="50dp"
-                    android:gravity="center_horizontal"
-                    android:textColor="@color/black"
-                    android:id="@+id/focus3"
-                    android:text="@string/soft"/>
-            </androidx.cardview.widget.CardView>
-
-            <ImageView
-                android:id="@+id/eqimg"
-                android:layout_width="wrap_content"
-                android:layout_height="200dp"
-                android:layout_marginRight="50dp"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="26dp"
-                android:gravity="center"
-                android:layout_below="@+id/card_focusarea3"
-                android:src="@drawable/eq" />
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_focusarea4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:elevation="3dp"
-                android:layout_below="@id/eqimg"
-                android:layout_margin="10dp"
-                card_view:cardCornerRadius="20dp">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:layout_below="@+id/appbar_layout"
-                    android:layout_margin="16dp"
-                    android:layout_marginTop="50dp"
-                    android:gravity="center_horizontal"
-                    android:textColor="@color/black"
-                    android:id="@+id/focus4"
-                    android:text="@string/eq"/>
-            </androidx.cardview.widget.CardView>
-
-            <ImageView
-                android:layout_below="@+id/card_focusarea4"
-                android:layout_width="wrap_content"
-                android:layout_height="200dp"
-                android:layout_marginTop="26dp"
-                android:layout_marginLeft="50dp"
-                android:layout_marginRight="50dp"
-                android:id="@+id/primg"
-                android:src="@drawable/priority" />
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_focusarea5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:elevation="3dp"
-                android:layout_margin="10dp"
-                android:layout_below="@id/primg"
-                card_view:cardCornerRadius="20dp">
-
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:layout_below="@+id/appbar_layout"
-                    android:layout_margin="16dp"
-                    android:layout_marginTop="50dp"
-                    android:gravity="center_horizontal"
-                    android:textColor="@color/black"
-                    android:id="@+id/focus5"
-                    android:text="@string/priority"/>
-            </androidx.cardview.widget.CardView>
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="200dp"
-                android:id="@+id/perfimg"
-                android:layout_marginTop="26dp"
-                android:layout_marginLeft="50dp"
-                android:layout_marginRight="50dp"
-                android:layout_below="@+id/card_focusarea5"
-                android:src="@drawable/performance" />
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_focusarea6"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:elevation="3dp"
-                android:layout_below="@id/perfimg"
-                android:layout_margin="10dp"
-                card_view:cardCornerRadius="20dp">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:layout_below="@+id/appbar_layout"
-                    android:layout_margin="16dp"
-                    android:layout_marginTop="50dp"
-                    android:gravity="center_horizontal"
-                    android:textColor="@color/black"
-                    android:id="@+id/focus6"
-                    android:text="@string/performance" />
-            </androidx.cardview.widget.CardView>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="5dp"
-                android:layout_marginTop="20dp"
-                android:id="@+id/ll2"
-                android:layout_below="@+id/card_focusarea6"
-                android:background="?android:attr/listDivider"
-                android:orientation="horizontal" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_below="@+id/appbar_layout"
                 android:layout_margin="16dp"
-                android:gravity="center"
-                android:layout_below="@+id/ll2">
+                android:layout_marginTop="50dp"
+                android:gravity="center_horizontal"
+                android:text="@string/goals"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
 
-                <Button
-                    android:id="@+id/knowmore"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/ll2"
-                    android:layout_gravity="center"
-                    android:text="KNOW MORE" />
+        <ImageView
+            android:id="@+id/imageView24"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/softskills"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_focusarea2" />
 
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:scaleType="centerCrop"
-                    android:padding="10dp"
-                    android:layout_marginLeft="100dp"
-                    android:id="@+id/chatbot"
-                    android:onClick="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentBottom="true"
-                    android:src="@drawable/chatbot"
-                    tools:ignore="OnClick" />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_focusarea3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:elevation="3dp"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView24">
 
+            <TextView
+                android:id="@+id/focus3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/appbar_layout"
+                android:layout_margin="16dp"
+                android:layout_marginTop="50dp"
+                android:gravity="center_horizontal"
+                android:text="@string/soft"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
 
-            </LinearLayout>
+        <ImageView
+            android:id="@+id/imageView25"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/eq"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_focusarea3" />
 
-        </RelativeLayout>
-    </androidx.core.widget.NestedScrollView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_focusarea4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:elevation="3dp"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView25">
 
-</RelativeLayout>
+            <TextView
+                android:id="@+id/focus4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/appbar_layout"
+                android:layout_margin="16dp"
+                android:layout_marginTop="50dp"
+                android:gravity="center_horizontal"
+                android:text="@string/eq"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/imageView26"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/goals"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_focusarea4" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_focusarea5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:elevation="3dp"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView26">
+
+            <TextView
+                android:id="@+id/focus5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/appbar_layout"
+                android:layout_margin="16dp"
+                android:layout_marginTop="50dp"
+                android:gravity="center_horizontal"
+                android:text="@string/priority"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/imageView27"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/performance"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_focusarea5" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_focusarea6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:elevation="3dp"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView27">
+
+            <TextView
+                android:id="@+id/focus6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/appbar_layout"
+                android:layout_margin="16dp"
+                android:layout_marginTop="50dp"
+                android:gravity="center_horizontal"
+                android:text="@string/performance"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/knowmore"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="KNOW MORE"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_focusarea6" />
+
+        <ImageView
+            android:id="@+id/chatbot"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="16dp"
+            android:onClick="true"
+            android:padding="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/chatbot"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_focusarea6"
+            tools:ignore="OnClick" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -44,6 +44,7 @@ public class AfterPaymentSchoolStudentDashboardActivity extends AppCompatActivit
     StudentDashboardFragment studentDashboardFragment = new StudentDashboardFragment();
     StudentDashboardFragment3 studentDashboardFragment3 = new StudentDashboardFragment3();
     StudentDashboardFragment4 studentDashboardFragment4 = new StudentDashboardFragment4();
+    StudentDashboardFragment2 studentDashboardFragment2 = new StudentDashboardFragment2();
     TimeTrackerFragment timeTrackerFragment = new TimeTrackerFragment();
 
     AfterPaymentMoreFragment afterPaymentMoreFragment = new AfterPaymentMoreFragment();
@@ -74,7 +75,7 @@ public class AfterPaymentSchoolStudentDashboardActivity extends AppCompatActivit
             case R.id.process:
                 FragmentManager fragmentManager1 = getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction1 = fragmentManager1.beginTransaction();
-                fragmentTransaction1.replace(R.id.main_frame,timeTrackerFragment);
+                fragmentTransaction1.replace(R.id.main_frame,studentDashboardFragment2);
                 fragmentTransaction1.addToBackStack(null);
                 fragmentTransaction1.commit();
                 return true;

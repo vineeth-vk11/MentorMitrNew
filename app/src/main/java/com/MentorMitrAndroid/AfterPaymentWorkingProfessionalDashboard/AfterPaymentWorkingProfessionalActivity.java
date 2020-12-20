@@ -27,6 +27,7 @@ public class AfterPaymentWorkingProfessionalActivity extends AppCompatActivity i
     StudentDashboardFragment3 studentDashboardFragment3 = new StudentDashboardFragment3();
     StudentDashboardFragment4 studentDashboardFragment4 = new StudentDashboardFragment4();
     AfterPaymentMoreFragment afterPaymentMoreFragment = new AfterPaymentMoreFragment();
+    WorkingProfessionalOutputsFragment workingProfessionalOutputsFragment = new WorkingProfessionalOutputsFragment();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,7 +71,7 @@ public class AfterPaymentWorkingProfessionalActivity extends AppCompatActivity i
             case R.id.blogs:
                 FragmentManager fragmentManager3 = getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction3 = fragmentManager3.beginTransaction();
-                fragmentTransaction3.replace(R.id.main_frame,studentDashboardFragment4);
+                fragmentTransaction3.replace(R.id.main_frame,workingProfessionalOutputsFragment);
                 fragmentTransaction3.addToBackStack(null);
                 fragmentTransaction3.commit();
                 return true;

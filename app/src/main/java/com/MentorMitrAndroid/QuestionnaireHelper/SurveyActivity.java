@@ -11,7 +11,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
+import com.MentorMitrAndroid.AfterPaymentCollegeStudentDashboard.AfterPaymentCollegeStudentDashboardActivity;
 import com.MentorMitrAndroid.AfterPaymentStudentDashboard.AfterPaymentSchoolStudentDashboardActivity;
+import com.MentorMitrAndroid.AfterPaymentWorkingProfessionalDashboard.AfterPaymentWorkingProfessionalActivity;
 import com.MentorMitrAndroid.QuestionnaireHelper.Adapters.AdapterFragmentQ;
 import com.MentorMitrAndroid.QuestionnaireHelper.fragment.FragmentCheckboxes;
 import com.MentorMitrAndroid.QuestionnaireHelper.fragment.FragmentEnd;
@@ -174,17 +176,42 @@ public class SurveyActivity extends AppCompatActivity {
             db.collection("questions_specific_reply").document(FirebaseAuth.getInstance().getCurrentUser().getUid()).set(surveyAnswers).addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
-                    if (task.isSuccessful()) {
-                        Toast.makeText(getApplicationContext(), "Successful", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(getApplicationContext(), AfterPaymentSchoolStudentDashboardActivity.class);
-                        startActivity(intent);
-                        finish();
-                    } else {
-                        Toast.makeText(getApplicationContext(), "Failed", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(getApplicationContext(), AfterPaymentSchoolStudentDashboardActivity.class);
-                        startActivity(intent);
-                        finish();
-                    }
+                    db.collection("users").document(FirebaseAuth.getInstance().getCurrentUser().getUid()).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                        @Override
+                        public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                            DocumentSnapshot documentSnapshot = task.getResult();
+
+                            String type = documentSnapshot.getString("type");
+
+                            if(type.equals("School")){
+                                if (task.isSuccessful()) {
+                                    Toast.makeText(getApplicationContext(), "Successful", Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(getApplicationContext(), AfterPaymentSchoolStudentDashboardActivity.class);
+                                    startActivity(intent);
+                                    finish();
+                                } else {
+                                    Toast.makeText(getApplicationContext(), "Failed", Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(getApplicationContext(), AfterPaymentSchoolStudentDashboardActivity.class);
+                                    startActivity(intent);
+                                    finish();
+                                }
+                            }
+                            else if(type.equals("College")){
+                                if (task.isSuccessful()) {
+                                    Toast.makeText(getApplicationContext(), "Successful", Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(getApplicationContext(), AfterPaymentCollegeStudentDashboardActivity.class);
+                                    startActivity(intent);
+                                    finish();
+                                } else {
+                                    Toast.makeText(getApplicationContext(), "Failed", Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(getApplicationContext(), AfterPaymentCollegeStudentDashboardActivity.class);
+                                    startActivity(intent);
+                                    finish();
+                                }
+                            }
+                        }
+                    });
+
                 }
             });
         }
@@ -221,12 +248,12 @@ public class SurveyActivity extends AppCompatActivity {
                                         public void onComplete(@NonNull Task<Void> task) {
                                             if (task.isSuccessful()) {
                                                 Toast.makeText(getApplicationContext(), "Successful", Toast.LENGTH_SHORT).show();
-                                                Intent intent = new Intent(getApplicationContext(), AfterPaymentSchoolStudentDashboardActivity.class);
+                                                Intent intent = new Intent(getApplicationContext(), AfterPaymentCollegeStudentDashboardActivity.class);
                                                 startActivity(intent);
                                                 finish();
                                             } else {
                                                 Toast.makeText(getApplicationContext(), "Failed", Toast.LENGTH_SHORT).show();
-                                                Intent intent = new Intent(getApplicationContext(), AfterPaymentSchoolStudentDashboardActivity.class);
+                                                Intent intent = new Intent(getApplicationContext(), AfterPaymentCollegeStudentDashboardActivity.class);
                                                 startActivity(intent);
                                                 finish();
                                             }
@@ -261,12 +288,12 @@ public class SurveyActivity extends AppCompatActivity {
                                         public void onComplete(@NonNull Task<Void> task) {
                                             if (task.isSuccessful()) {
                                                 Toast.makeText(getApplicationContext(), "Successful", Toast.LENGTH_SHORT).show();
-                                                Intent intent = new Intent(getApplicationContext(), AfterPaymentSchoolStudentDashboardActivity.class);
+                                                Intent intent = new Intent(getApplicationContext(), AfterPaymentWorkingProfessionalActivity.class);
                                                 startActivity(intent);
                                                 finish();
                                             } else {
                                                 Toast.makeText(getApplicationContext(), "Failed", Toast.LENGTH_SHORT).show();
-                                                Intent intent = new Intent(getApplicationContext(), AfterPaymentSchoolStudentDashboardActivity.class);
+                                                Intent intent = new Intent(getApplicationContext(), AfterPaymentWorkingProfessionalActivity.class);
                                                 startActivity(intent);
                                                 finish();
                                             }

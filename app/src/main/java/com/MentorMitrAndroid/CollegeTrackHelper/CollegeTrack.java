@@ -128,13 +128,6 @@ public class CollegeTrack extends AppCompatActivity {
                     itemAdapter.updateItem(currentItem);
                     currentItem = null;
                 }
-                //reset form fields
-                etSerialNumber.setText("");
-                etCollege.setText("");
-                etCourse.setText("");
-                etSelection.setText("");
-                etAchieve.setText("");
-                etImprove.setText("");
 
                 String user_id = mAuth.getCurrentUser().getUid();
                mdatabase= FirebaseDatabase.getInstance().getReference("college").child(user_id);
@@ -146,42 +139,44 @@ public class CollegeTrack extends AppCompatActivity {
                 mdatabase.child("college_options").setValue(store).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
+                        db.collection("users").document(FirebaseAuth.getInstance().getCurrentUser().getUid()).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                            @Override
+                            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                                DocumentSnapshot documentSnapshot = task.getResult();
 
-                    }
-                });
+                                String type = documentSnapshot.getString("type");
 
-
-                db.collection("users").document(currentUser.getUid()).get().addOnCompleteListener(task -> {
-                    if (task.isSuccessful()) {
-                        if (task.getResult().exists()) {
-                            currentUserData = task.getResult().getData();
-                            if ((boolean) currentUserData.get("paid")) {
-                                FirebaseFirestore.getInstance().collection("users").get().addOnCompleteListener(
-                                        new OnCompleteListener<QuerySnapshot>() {
-                                            @Override
-                                            public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                                                if(task.isSuccessful())
-                                                {
-                                                    for(DocumentSnapshot doc : task.getResult().getDocuments())
-                                                    {
-                                                        if(doc.getData().get("email").toString().equalsIgnoreCase(currentUser.getEmail()))
-                                                        {
-                                                            moveToPage(doc.getData().get("type").toString());
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                );
+                                if(type.equals("School")){
+                                    if (task.isSuccessful()) {
+                                        Toast.makeText(getApplicationContext(), "Successful", Toast.LENGTH_SHORT).show();
+                                        Intent intent = new Intent(getApplicationContext(), AfterPaymentSchoolStudentDashboardActivity.class);
+                                        startActivity(intent);
+                                        finish();
+                                    } else {
+                                        Toast.makeText(getApplicationContext(), "Failed", Toast.LENGTH_SHORT).show();
+                                        Intent intent = new Intent(getApplicationContext(), AfterPaymentSchoolStudentDashboardActivity.class);
+                                        startActivity(intent);
+                                        finish();
+                                    }
+                                }
+                                else if(type.equals("College")){
+                                    if (task.isSuccessful()) {
+                                        Toast.makeText(getApplicationContext(), "Successful", Toast.LENGTH_SHORT).show();
+                                        Intent intent = new Intent(getApplicationContext(), AfterPaymentCollegeStudentDashboardActivity.class);
+                                        startActivity(intent);
+                                        finish();
+                                    } else {
+                                        Toast.makeText(getApplicationContext(), "Failed", Toast.LENGTH_SHORT).show();
+                                        Intent intent = new Intent(getApplicationContext(), AfterPaymentCollegeStudentDashboardActivity.class);
+                                        startActivity(intent);
+                                        finish();
+                                    }
+                                }
                             }
-                            fetchedUserData = true;
-                        }
+                        });
                     }
                 });
-
             }
-
-
         });
 
     }

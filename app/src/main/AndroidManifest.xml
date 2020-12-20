@@ -9,7 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MentorMitr">
-        <activity android:name=".MentorAnswersHelper.MentorCollegeTrackAnswersActivity"></activity>
+        <activity android:name=".StudentsSuggestedTimingsHelper.StudentsSuggestedTimingsActivity"></activity>
+        <activity android:name=".StudentsMentorsFeedbackActivity" />
+        <activity android:name=".MentorSessionFeedbackHelper.MentorSessionFeedbackActivity" />
+        <activity android:name=".GradesHelper.GradesAnalysisHelper.GradesAnalysisActivity" />
+        <activity android:name=".GradesHelper.SubjectsHelper.SubjectsActivity" />
+        <activity android:name=".GradesHelper.GradesHelper.GradesActivity" />
+        <activity android:name=".MentorWeeklyStatsHelper.MentorWeeklySuggestionsActivity" />
+        <activity android:name=".MentorAnswersHelper.MentorCollegeTrackAnswersActivity" />
         <activity android:name=".MentorAnswersHelper.MentorTracksAndOptionsActivity" />
         <activity android:name=".MentorAnswersHelper.MentorSportsAnswersActivity" />
         <activity android:name=".MentorAnswersHelper.MentorQuestionnaireAnswersActivity" />
@@ -43,10 +50,23 @@
         <activity android:name=".GoalsAndAffirmationsHelper.GoalsAndAffirmationsActivity" />
         <activity android:name=".SessionFeedbackHelper.SessionFeedbackActivity" />
         <activity android:name=".SessionSchedulingHelper.SessionSchedulingActivity" />
+        <activity android:name=".ProgramsAndPaymentsHelper.StudentProgram" />
+        <activity android:name=".ProgramsAndPaymentsHelper.StudentProgram1Month" />
+        <activity android:name=".ProgramsAndPaymentsHelper.StudentProgram3Months" />
+        <activity android:name=".ProgramsAndPaymentsHelper.StudentProgram1Year" />
+        <activity android:name=".ProgramsAndPaymentsHelper.UniversityProgram1Month" />
+        <activity android:name=".ProgramsAndPaymentsHelper.UniversityProgram3Month" />
+        <activity android:name=".ProgramsAndPaymentsHelper.UniversityStudentProgram" />
+        <activity android:name=".ProgramsAndPaymentsHelper.WorkingProfessionalProgram" />
+        <activity android:name=".ProgramsAndPaymentsHelper.WorkingProfessionalProgram1Month" />
+        <activity android:name=".ProgramsAndPaymentsHelper.WorkingProfessionalProgram3Month" />
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_test_MvrwOKu0TQyu0C" />
     </application>
 
 </manifest>

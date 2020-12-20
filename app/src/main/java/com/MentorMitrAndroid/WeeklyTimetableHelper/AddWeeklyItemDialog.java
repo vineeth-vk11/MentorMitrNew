@@ -34,11 +34,19 @@ public class AddWeeklyItemDialog extends AppCompatDialogFragment {
     ArrayList<String> timingsList = new ArrayList<>();
     ArrayList<String> activitiesList;
 
-    String dayOfWeek;
+    String existingTime, existingActivity;
 
-    public AddWeeklyItemDialog(ArrayList<String> activitiesList, String dayOfWeek) {
+    String dayOfWeek;
+    String positive;
+    String from;
+    String id;
+
+    public AddWeeklyItemDialog(ArrayList<String> activitiesList, String dayOfWeek, String existingActivity, String existingTime, String id) {
         this.activitiesList = activitiesList;
         this.dayOfWeek = dayOfWeek;
+        this.existingActivity = existingActivity;
+        this.existingTime = existingTime;
+        this.id = id;
     }
 
     @NonNull
@@ -92,6 +100,20 @@ public class AddWeeklyItemDialog extends AppCompatDialogFragment {
         timings.setAdapter(adapter);
         activities.setAdapter(adapter1);
 
+        if(existingTime!=null && existingActivity!=null){
+            timings.setText(existingTime);
+            activities.setText(existingActivity);
+            timings.setEnabled(false);
+
+            positive = "Save";
+            from = "Mentor";
+        }
+        else {
+            from = "Student";
+            positive = "Add";
+        }
+
+
         builder.setView(view)
                 .setTitle("Add Activity")
                 .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -100,7 +122,7 @@ public class AddWeeklyItemDialog extends AppCompatDialogFragment {
 
                     }
                 })
-                .setPositiveButton("Add", new DialogInterface.OnClickListener() {
+                .setPositiveButton(positive, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
 
@@ -124,13 +146,31 @@ public class AddWeeklyItemDialog extends AppCompatDialogFragment {
                             FirebaseFirestore db;
                             db = FirebaseFirestore.getInstance();
 
-                            db.collection("WeeklyTimetables").document(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                                    .collection(dayOfWeek).document(String.valueOf(serial)).set(data).addOnCompleteListener(new OnCompleteListener<Void>() {
-                                @Override
-                                public void onComplete(@NonNull Task<Void> task) {
+                            if(from.equals("Student")){
+                                db.collection("WeeklyTimetables").document(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                        .collection(dayOfWeek).document(String.valueOf(serial)).set(data).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task) {
 
-                                }
-                            });
+                                    }
+                                });
+                            }
+                            else {
+                                HashMap<String, Object> editedData = new HashMap<>();
+                                data.put("timing", selectedTiming);
+                                data.put("activity", activity);
+                                data.put("number",String.valueOf(serial));
+                                data.put("day",dayOfWeek);
+
+                                db.collection("WeeklyTimetableSuggestions").document(id)
+                                        .collection(dayOfWeek).document(String.valueOf(serial)).set(editedData).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task) {
+
+                                    }
+                                });
+
+                            }
                         }
                     }
                 });

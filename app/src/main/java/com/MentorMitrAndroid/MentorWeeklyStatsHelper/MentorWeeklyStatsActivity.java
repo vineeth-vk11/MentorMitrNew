@@ -5,14 +5,25 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 
+import com.MentorMitrAndroid.MentorWeeklyStatsHelper.SuggestionHelper.SuggestionsModel;
 import com.MentorMitrAndroid.R;
+import com.github.mikephil.charting.charts.PieChart;
+import com.github.mikephil.charting.data.PieData;
+import com.github.mikephil.charting.data.PieDataSet;
+import com.github.mikephil.charting.data.PieEntry;
+import com.github.mikephil.charting.utils.ColorTemplate;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
@@ -20,7 +31,9 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class MentorWeeklyStatsActivity extends AppCompatActivity {
@@ -32,42 +45,52 @@ public class MentorWeeklyStatsActivity extends AppCompatActivity {
     String id;
 
     ArrayList<String> activities = new ArrayList<>();
-    ArrayList<String> all = new ArrayList<>(100);
     ArrayList<MentorWeeklyActivityModel> mentorWeeklyActivityModelArrayList = new ArrayList<>();
 
-    int i=0;
+    PieChart pieChart;
+    HashMap<String, Object> data;
+    ArrayList<PieEntry> chartData = new ArrayList<>();
+
+    Button suggest;
+    ArrayList<SuggestionsModel> suggestionsModelArrayList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mentor_weekly_stats_activity);
 
-        for(int i=0; i<100;i++){
-            all.add(String.valueOf(i));
-        }
+        pieChart = findViewById(R.id.statsChart);
+        suggest = findViewById(R.id.suggest);
 
         if(getIntent()!=null){
             id = getIntent().getStringExtra("id");
         }
 
-        db = FirebaseFirestore.getInstance();
-        mentorWeeklyStatsModelArrayList = new ArrayList<>();
-        mentorWeeklyStatsRecycler = findViewById(R.id.weeklyStatsRecycler);
-        mentorWeeklyStatsRecycler.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
-        mentorWeeklyStatsRecycler.setHasFixedSize(true);
+        suggest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MentorWeeklySuggestionsActivity.class);
+                intent.putExtra("data",suggestionsModelArrayList);
+                intent.putExtra("id",id);
+                startActivity(intent);
+            }
+        });
 
-        getMonday();
+
+        db = FirebaseFirestore.getInstance();
+
+        getActivities();
     }
 
+
     private void getActivities(){
-        db.collection("Activities").document(FirebaseAuth.getInstance().getCurrentUser().getUid())
+        db.collection("Activities").document(id)
                 .collection("activites").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 for(DocumentSnapshot documentSnapshot: task.getResult()){
                     activities.add(documentSnapshot.getString("activity"));
                 }
-                Log.i("activities",String.valueOf(activities));
                 getMonday();
             }
         });
@@ -78,8 +101,9 @@ public class MentorWeeklyStatsActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 for(DocumentSnapshot documentSnapshot: task.getResult()){
-                    all.set(i,documentSnapshot.getString("activity"));
-                    i++;
+                    MentorWeeklyActivityModel mentorWeeklyActivityModel = new MentorWeeklyActivityModel();
+                    mentorWeeklyActivityModel.setActivity(documentSnapshot.getString("activity"));
+                    mentorWeeklyActivityModelArrayList.add(mentorWeeklyActivityModel);
                 }
                 getTuesday();
             }
@@ -92,7 +116,9 @@ public class MentorWeeklyStatsActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 for(DocumentSnapshot documentSnapshot: task.getResult()){
-                    all.set(i,documentSnapshot.getString("activity"));
+                    MentorWeeklyActivityModel mentorWeeklyActivityModel = new MentorWeeklyActivityModel();
+                    mentorWeeklyActivityModel.setActivity(documentSnapshot.getString("activity"));
+                    mentorWeeklyActivityModelArrayList.add(mentorWeeklyActivityModel);
                 }
                 getWednesday();
             }
@@ -105,7 +131,9 @@ public class MentorWeeklyStatsActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 for(DocumentSnapshot documentSnapshot: task.getResult()){
-                    all.set(i,documentSnapshot.getString("activity"));
+                    MentorWeeklyActivityModel mentorWeeklyActivityModel = new MentorWeeklyActivityModel();
+                    mentorWeeklyActivityModel.setActivity(documentSnapshot.getString("activity"));
+                    mentorWeeklyActivityModelArrayList.add(mentorWeeklyActivityModel);
                 }
                 getThursday();
             }
@@ -118,7 +146,9 @@ public class MentorWeeklyStatsActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 for(DocumentSnapshot documentSnapshot: task.getResult()){
-                    all.set(i,documentSnapshot.getString("activity"));
+                    MentorWeeklyActivityModel mentorWeeklyActivityModel = new MentorWeeklyActivityModel();
+                    mentorWeeklyActivityModel.setActivity(documentSnapshot.getString("activity"));
+                    mentorWeeklyActivityModelArrayList.add(mentorWeeklyActivityModel);
                 }
                 getFriday();
             }
@@ -131,7 +161,9 @@ public class MentorWeeklyStatsActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 for(DocumentSnapshot documentSnapshot: task.getResult()){
-                    all.set(i,documentSnapshot.getString("activity"));
+                    MentorWeeklyActivityModel mentorWeeklyActivityModel = new MentorWeeklyActivityModel();
+                    mentorWeeklyActivityModel.setActivity(documentSnapshot.getString("activity"));
+                    mentorWeeklyActivityModelArrayList.add(mentorWeeklyActivityModel);
                 }
                 getSaturday();
             }
@@ -144,7 +176,9 @@ public class MentorWeeklyStatsActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 for(DocumentSnapshot documentSnapshot: task.getResult()){
-                    all.set(i,documentSnapshot.getString("activity"));
+                    MentorWeeklyActivityModel mentorWeeklyActivityModel = new MentorWeeklyActivityModel();
+                    mentorWeeklyActivityModel.setActivity(documentSnapshot.getString("activity"));
+                    mentorWeeklyActivityModelArrayList.add(mentorWeeklyActivityModel);
                 }
                 getSunday();
             }
@@ -157,7 +191,9 @@ public class MentorWeeklyStatsActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 for(DocumentSnapshot documentSnapshot: task.getResult()){
-                    all.set(i,documentSnapshot.getString("activity"));
+                    MentorWeeklyActivityModel mentorWeeklyActivityModel = new MentorWeeklyActivityModel();
+                    mentorWeeklyActivityModel.setActivity(documentSnapshot.getString("activity"));
+                    mentorWeeklyActivityModelArrayList.add(mentorWeeklyActivityModel);
                 }
 
                 calculate();
@@ -167,14 +203,42 @@ public class MentorWeeklyStatsActivity extends AppCompatActivity {
 
     private void calculate(){
 
-        Set<String > list = new HashSet<>(all);
+        data = new HashMap<>();
 
-        Log.i("list",String.valueOf(list));
+        for(int i=0;i<activities.size();i++){
+            int x=0;
+            for(int j=0; j<mentorWeeklyActivityModelArrayList.size();j++){
+                if(mentorWeeklyActivityModelArrayList.get(j).getActivity().equals(activities.get(i))){
+                    x=x+1;
+                }
+            }
+            Log.i(activities.get(i), String.valueOf(x));
+            data.put(activities.get(i), x);
+            chartData.add(new PieEntry(x,activities.get(i)));
 
-        for(String s: list){
-            Log.i(s, String.valueOf(Collections.frequency(list,s)));
+            SuggestionsModel suggestionsModel = new SuggestionsModel();
+            suggestionsModel.setActivityName(activities.get(i));
+            suggestionsModel.setHours(String.valueOf(x));
+
+            suggestionsModelArrayList.add(suggestionsModel);
+
+            setGraph();
         }
-
     }
 
+    private void setGraph(){
+        PieDataSet pieDataSet = new PieDataSet(chartData,"" );
+        pieDataSet.setColors(ColorTemplate.MATERIAL_COLORS);
+        pieDataSet.setValueTextColor(Color.BLACK);
+        pieDataSet.setValueTextSize(16f);
+
+        PieData pieData = new PieData(pieDataSet);
+
+        pieChart.setData(pieData);
+        pieChart.getDescription().setEnabled(false);
+        pieChart.setCenterText("Weekly");
+        pieChart.animate();
+        pieChart.invalidate();
+
+    }
 }

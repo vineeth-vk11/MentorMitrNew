@@ -50,6 +50,9 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.10.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'com.firebaseui:firebase-ui-storage:6.2.0'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 
+    implementation 'com.google.firebase:firebase-functions:19.1.0'
+    implementation 'com.razorpay:checkout:1.5.16'
 
 }

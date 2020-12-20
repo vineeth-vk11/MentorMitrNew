@@ -118,6 +118,7 @@ public class StudentDashboardFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getContext(), WeeklyTimetableActivity.class);
+                intent.putExtra("from", "student1");
                 startActivity(intent);
             }
         });

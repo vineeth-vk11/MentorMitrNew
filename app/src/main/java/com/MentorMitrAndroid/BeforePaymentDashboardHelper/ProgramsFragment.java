@@ -10,6 +10,9 @@ import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import com.MentorMitrAndroid.MainActivity;
+import com.MentorMitrAndroid.ProgramsAndPaymentsHelper.StudentProgram;
+import com.MentorMitrAndroid.ProgramsAndPaymentsHelper.UniversityStudentProgram;
+import com.MentorMitrAndroid.ProgramsAndPaymentsHelper.WorkingProfessionalProgram;
 import com.MentorMitrAndroid.R;
 
 public class ProgramsFragment extends Fragment {
@@ -29,7 +32,7 @@ public class ProgramsFragment extends Fragment {
         studentProgram.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(), MainActivity.class);
+                Intent intent = new Intent(getContext(), StudentProgram.class);
                 startActivity(intent);
             }
         });
@@ -37,7 +40,7 @@ public class ProgramsFragment extends Fragment {
         collegeProgram.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(), MainActivity.class);
+                Intent intent = new Intent(getContext(), UniversityStudentProgram.class);
                 startActivity(intent);
             }
         });
@@ -45,7 +48,7 @@ public class ProgramsFragment extends Fragment {
         workingProgram.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(), MainActivity.class);
+                Intent intent = new Intent(getContext(), WorkingProfessionalProgram.class);
                 startActivity(intent);
             }
         });

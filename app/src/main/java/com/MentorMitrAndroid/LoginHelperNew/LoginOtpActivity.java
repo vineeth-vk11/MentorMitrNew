@@ -15,7 +15,9 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.MentorMitrAndroid.AfterPaymentCollegeStudentDashboard.AfterPaymentCollegeStudentDashboardActivity;
 import com.MentorMitrAndroid.AfterPaymentStudentDashboard.AfterPaymentSchoolStudentDashboardActivity;
+import com.MentorMitrAndroid.AfterPaymentWorkingProfessionalDashboard.AfterPaymentWorkingProfessionalActivity;
 import com.MentorMitrAndroid.BeforePaymentDashboardHelper.BeforePaymentDashboardActivity;
 import com.MentorMitrAndroid.MainActivity;
 import com.MentorMitrAndroid.MentorDashboard.MentorDashboardActivity;
@@ -174,10 +176,14 @@ public class LoginOtpActivity extends AppCompatActivity {
                                             finish();
                                         }
                                         else if(type.equals("College")){
-
+                                            Intent intent = new Intent(LoginOtpActivity.this, AfterPaymentCollegeStudentDashboardActivity.class);
+                                            startActivity(intent);
+                                            finish();
                                         }
                                         else if(type.equals("Working")){
-
+                                            Intent intent = new Intent(LoginOtpActivity.this, AfterPaymentWorkingProfessionalActivity.class);
+                                            startActivity(intent);
+                                            finish();
                                         }
                                         else if(type.equals("Mentor")){
                                             Intent intent = new Intent(LoginOtpActivity.this, MentorDashboardActivity.class);

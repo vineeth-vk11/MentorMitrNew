@@ -1,6 +1,7 @@
 package com.MentorMitrAndroid.MentorWeeklyStatsHelper;
 
 public class MentorWeeklyActivityModel {
+
     String activity;
 
     public MentorWeeklyActivityModel() {

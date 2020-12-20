@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/tools"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    app:ignore="NamespaceTypo">
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            style="@style/Widget.MaterialComponents.AppBarLayout.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/material_toolbar"
+                app:title="Working Professional Program"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/working_1month_cardview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp"
+            android:layout_marginHorizontal="16dp"
+            android:elevation="1dp"
+            card_view:cardCornerRadius="20dp"
+            android:clickable="true"
+            card_view:cardBackgroundColor="@color/colorAccent"
+            android:focusable="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/working_program_1month"
+                        android:textSize="20sp"
+                        android:text="COMPASS PRO:\n1 Month Program"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/working_program_1month_addinfo"
+                        android:textSize="16sp"
+                        android:text="Optimize their Efforts to achieve their long term and short term goals"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginStart="10dp"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/working_program_1month_viewmore"
+                        android:textSize="16sp"
+                        android:text="View More.."
+                        android:layout_marginTop="30dp"
+                        android:layout_marginStart="10dp"
+                        android:textColor="@color/white"
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center_vertical">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="200dp"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/working1month"
+                      android:layout_marginLeft="@+id/student_program_12months"
+                        android:layout_marginTop="20dp"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/working_3months_cardview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp"
+            android:layout_marginHorizontal="16dp"
+            android:elevation="1dp"
+            card_view:cardCornerRadius="20dp"
+            android:clickable="true"
+            card_view:cardBackgroundColor="@color/colorPrimary"
+            android:focusable="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/working_program_3months"
+                        android:textSize="20sp"
+                        android:text="Habit Forming PRO:\n3 Months Program"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/working_program_3months_addinfo"
+                        android:textSize="16sp"
+                        android:text="Helps in optimization of your performance by scientific assessment"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginStart="10dp"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/working_program_3months_viewmore"
+                        android:textSize="16sp"
+                        android:text="View More.."
+                        android:layout_marginTop="30dp"
+                        android:layout_marginStart="10dp"
+                        android:textColor="@color/white"
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center_vertical">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="200dp"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/working3month"
+                        android:layout_marginLeft="@+id/student_program_12months"
+                        android:layout_marginTop="20dp"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>
+
+<!--
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".WorkingProfessionalProgram">
+
+    <com.google.android.material.appbar.AppBarLayout
+        style="@style/Widget.MaterialComponents.AppBarLayout.Primary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/material_toolbar"
+            app:title="Programs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <ScrollView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" MentorMitr Engagement Module – Working Executives/Professionals"
+                android:textSize="30dp"
+                android:layout_margin="10sp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#C52318"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Objective : MentorMitr spirit and endeavor is to engage with the working people and help them improve their" android:textSize="20sp"
+                android:layout_margin="10sp"
+                android:fontFamily="sans-serif-black" />
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_obj1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:elevation="1dp"
+                android:layout_marginTop="20dp"
+                card_view:cardBackgroundColor="#F1F9FA"
+                android:layout_marginStart="10dp"
+                card_view:cardCornerRadius="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:id="@+id/obj1"
+                    android:layout_marginStart="10dp"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif"
+                    />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_margin="10sp"
+                android:fontFamily="@font/alfa_slab_one"
+                android:textColor="@color/colorAccent"
+                android:text="There are 2 levels of Engagement:"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_margin="10sp"
+                android:fontFamily="@font/alfa_slab_one"
+                android:textColor="@color/colorAccent"
+                android:text="A. COMPASS PRO (1 Month ) :"/>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_prog1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:elevation="1dp"
+                android:layout_marginTop="20dp"
+                card_view:cardBackgroundColor="#F1F9FA"
+                android:layout_marginStart="10dp"
+                card_view:cardCornerRadius="20dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:id="@+id/prog1"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="sans-serif"
+                    android:layout_margin="10dp"
+                    />
+            </androidx.cardview.widget.CardView>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/working_promocode1"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:hint="Apply PromoCode">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout> <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/pay_working_1month"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="24dp"
+                android:layout_marginLeft="80dp"
+                android:layout_marginRight="80dp"
+                android:padding="12dp"
+                android:textSize="20dp"
+                android:fontFamily="sans-serif"
+                style="bold"
+                android:text="Pay for 1 month"
+                android:background="@drawable/oval"
+
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_margin="10sp"
+                android:fontFamily="@font/alfa_slab_one"
+                android:textColor="@color/colorAccent"
+                android:text="B. Habit Forming PRO ( 3 Months ) :"/>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_prog2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:elevation="1dp"
+                android:layout_marginTop="20dp"
+                card_view:cardBackgroundColor="#F1F9FA"
+                android:layout_marginStart="10dp"
+                card_view:cardCornerRadius="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:id="@+id/prog2"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="sans-serif"
+                    android:layout_margin="10sp"
+                    />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_margin="10sp"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="Month 1"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_prog3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:elevation="1dp"
+                android:layout_marginTop="20dp"
+                card_view:cardBackgroundColor="#F1F9FA"
+                android:layout_marginStart="10dp"
+                card_view:cardCornerRadius="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:id="@+id/prog3"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="sans-serif"
+                    android:layout_margin="10sp"
+                    />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_margin="10sp"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="Month 2"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_prog4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:elevation="1dp"
+                android:layout_marginTop="20dp"
+                card_view:cardBackgroundColor="#F1F9FA"
+                android:layout_marginStart="10dp"
+                card_view:cardCornerRadius="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:id="@+id/prog4"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="sans-serif"
+                    android:layout_margin="10sp"
+                    />
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_margin="10sp"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="Month 3"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_prog5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:elevation="1dp"
+                android:layout_marginTop="20dp"
+                card_view:cardBackgroundColor="#F1F9FA"
+                android:layout_marginStart="10dp"
+                card_view:cardCornerRadius="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:id="@+id/prog5"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="sans-serif"
+                    android:layout_margin="10sp"
+                    />
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_margin="10sp"
+                android:fontFamily="@font/alfa_slab_one"
+                android:textColor="@color/colorAccent"
+                android:text="Other Support includes :"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_prog6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:elevation="1dp"
+                android:layout_marginTop="20dp"
+                card_view:cardBackgroundColor="#F1F9FA"
+                android:layout_marginStart="10dp"
+                card_view:cardCornerRadius="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:id="@+id/prog6"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="sans-serif"
+                    android:layout_margin="10sp"
+                    />
+            </androidx.cardview.widget.CardView>
+
+&lt;!&ndash;
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">&ndash;&gt;&lt;!&ndash;
+                <CheckBox
+                    android:id="@+id/working_checkbox_3month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:layout_marginStart="10dp"/>&ndash;&gt;
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/working_promocode3"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:hint="Apply PromoCode">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+&lt;!&ndash;
+            <TextView
+                    android:id="@+id/working_promocode3"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="1"
+                    style="bold"
+                    android:text="Apply 'WELCOME1000' to get Rs.1000 off"
+                    android:textColor="@color/cardview_dark_background"
+                    android:layout_height="match_parent"
+                    />&ndash;&gt;
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/pay_working_3month"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="24dp"
+                android:layout_marginLeft="80dp"
+                android:layout_marginRight="80dp"
+                android:padding="12dp"
+                android:textSize="20dp"
+                android:fontFamily="sans-serif"
+                style="bold"
+                android:text="Pay for 3 months"
+                android:background="@drawable/oval"
+
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+</LinearLayout>
+-->

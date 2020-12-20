@@ -9,6 +9,7 @@ import android.view.View;
 
 import com.MentorMitrAndroid.GoalsAndAffirmationsHelper.GoalsAndAffirmationsActivity;
 import com.MentorMitrAndroid.MentorAnswersHelper.MentorQuestionnaireAnswersActivity;
+import com.MentorMitrAndroid.MentorSessionFeedbackHelper.MentorSessionFeedbackActivity;
 import com.MentorMitrAndroid.MentorWeeklyStatsHelper.MentorWeeklyStatsActivity;
 import com.MentorMitrAndroid.PriorityHelper.PrioritiesActivity;
 import com.MentorMitrAndroid.R;
@@ -16,7 +17,7 @@ import com.MentorMitrAndroid.WeeklyTimetableHelper.WeeklyTimetableActivity;
 
 public class WorkingDetailsForMentorActivity extends AppCompatActivity {
 
-    CardView questionnaire,priority, goalsAndAffirmations, weeklyTimetable, stats;
+    CardView questionnaire,priority, goalsAndAffirmations, weeklyTimetable, stats, feedback;
 
     String id;
 
@@ -33,6 +34,16 @@ public class WorkingDetailsForMentorActivity extends AppCompatActivity {
         weeklyTimetable = findViewById(R.id.materialCardView2);
         stats = findViewById(R.id.stats);
         questionnaire = findViewById(R.id.materialCardView);
+        feedback = findViewById(R.id.mentorFeedback);
+
+        feedback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MentorSessionFeedbackActivity.class);
+                intent.putExtra("id",id);
+                startActivity(intent);
+            }
+        });
 
         questionnaire.setOnClickListener(new View.OnClickListener() {
             @Override

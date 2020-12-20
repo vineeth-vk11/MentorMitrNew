@@ -14,7 +14,9 @@ import com.MentorMitrAndroid.AfterPaymentStudentDashboard.AfterPaymentSchoolStud
 import com.MentorMitrAndroid.AfterPaymentWorkingProfessionalDashboard.AfterPaymentWorkingProfessionalActivity;
 import com.MentorMitrAndroid.BeforePaymentDashboardHelper.BeforePaymentDashboardActivity;
 import com.MentorMitrAndroid.IntroHelper.IntroActivity;
+import com.MentorMitrAndroid.LoginHelperNew.LoginEnterDetailsActivity;
 import com.MentorMitrAndroid.LoginHelperNew.LoginMobileNumberActivity;
+import com.MentorMitrAndroid.LoginHelperNew.LoginOtpActivity;
 import com.MentorMitrAndroid.MentorDashboard.MentorDashboardActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -43,42 +45,54 @@ public class SplashActivity extends AppCompatActivity {
                 }
                 else {
                     if(FirebaseAuth.getInstance().getCurrentUser() != null){
-
                         FirebaseFirestore db;
                         db = FirebaseFirestore.getInstance();
-                        db.collection("users").document(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                                .get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+
+                        db.collection("users").document(FirebaseAuth.getInstance().getCurrentUser().getUid()).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                             @Override
                             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                                 DocumentSnapshot documentSnapshot = task.getResult();
 
-                                String type = documentSnapshot.getString("type");
+                                if(documentSnapshot.exists()){
 
-                                Log.i("type", type);
+                                    String type = documentSnapshot.getString("type");
+                                    Boolean paid = documentSnapshot.getBoolean("paid");
 
-                                if(type.equals("School")){
-                                    Intent intent = new Intent(SplashActivity.this, AfterPaymentSchoolStudentDashboardActivity.class);
-                                    startActivity(intent);
-                                    finish();
+                                    if(paid){
+                                        if(type.equals("School")){
+                                            Intent intent = new Intent(SplashActivity.this, AfterPaymentSchoolStudentDashboardActivity.class);
+                                            startActivity(intent);
+                                            finish();
+                                        }
+                                        else if(type.equals("College")){
+                                            Intent intent = new Intent(SplashActivity.this, AfterPaymentCollegeStudentDashboardActivity.class);
+                                            startActivity(intent);
+                                            finish();
+                                        }
+                                        else if(type.equals("Working")){
+                                            Intent intent = new Intent(SplashActivity.this, AfterPaymentWorkingProfessionalActivity.class);
+                                            startActivity(intent);
+                                            finish();
+                                        }
+                                        else if(type.equals("Mentor")){
+                                            Intent intent = new Intent(SplashActivity.this, MentorDashboardActivity.class);
+                                            startActivity(intent);
+                                            finish();
+                                        }
+                                    }
+                                    else {
+                                        Intent intent = new Intent(getApplicationContext(), BeforePaymentDashboardActivity.class);
+                                        startActivity(intent);
+                                        finish();
+                                    }
                                 }
-                                else if(type.equals("Mentor")){
-                                    Intent intent = new Intent(SplashActivity.this, MentorDashboardActivity.class);
-                                    startActivity(intent);
-                                    finish();
-                                }
-                                else if(type.equals("Working")){
-                                    Intent intent = new Intent(SplashActivity.this, AfterPaymentWorkingProfessionalActivity.class);
-                                    startActivity(intent);
-                                    finish();
-                                }
-                                else if(type.equals("College")){
-                                    Intent intent = new Intent(SplashActivity.this, AfterPaymentCollegeStudentDashboardActivity.class);
+                                else {
+                                    Intent intent = new Intent(SplashActivity.this, LoginEnterDetailsActivity.class);
                                     startActivity(intent);
                                     finish();
                                 }
                             }
                         });
-
                     }
                     else {
                         Intent intent = new Intent(SplashActivity.this, LoginMobileNumberActivity.class);

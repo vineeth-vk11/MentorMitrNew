@@ -10,15 +10,20 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.MentorMitrAndroid.BeforePaymentDashboardHelper.BeforePaymentDashboardActivity;
 import com.MentorMitrAndroid.MainActivity;
 import com.MentorMitrAndroid.R;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
 import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
@@ -111,20 +116,11 @@ public class LoginEnterDetailsActivity extends AppCompatActivity {
         mentorMap.put("name", fullNameEditText.getEditText().getText().toString());
         mentorMap.put("type", type);
         mentorMap.put("paid", false);
-        if(checkedType.getId()==R.id.mentor_login)
-        {
-            mentorCollection.document(currentUser.getUid()).set(mentorMap);
-            FirebaseFirestore.getInstance().collection("users").add(mentorMap);
-            Intent intent = new Intent(LoginEnterDetailsActivity.this, MainActivity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-            startActivity(intent);
-        }
-        else {
-            usersCollection.document(currentUser.getUid()).set(userMap);
-            Intent intent = new Intent(LoginEnterDetailsActivity.this, MainActivity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-            startActivity(intent);
-        }
+
+        usersCollection.document(currentUser.getUid()).set(userMap);
+        Intent intent = new Intent(LoginEnterDetailsActivity.this, BeforePaymentDashboardActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
         Toast.makeText(this, "You have successfully logged in!", Toast.LENGTH_SHORT).show();
     }
 
